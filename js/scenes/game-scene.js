@@ -34,6 +34,7 @@ export const gameScene = {
     this.starfield = createStarfield(1, 1, 50);
     this._stopResizeObserver = observeCanvasResize(this.canvas, (w, h) => {
       this.starfield?.resize?.(w, h);
+      this.positionCaption();
     });
 
     this.cannon = createCannon();
@@ -69,19 +70,47 @@ export const gameScene = {
     this.startNextWord();
   },
 
-  getSpriteLayout() {
+  /**
+   * スプライト・単語キャプション・大砲を上から順に非重複の帯（バンド）へ割り当てる、
+   * 単一の真実の情報源となるレイアウト計算。HUD/オンスクリーンキーボードぶんの
+   * セーフゾーンを差し引いた残りの高さを 52% / 16% / 32% で3分割する。
+   */
+  getLayout() {
     const w = this.canvas.width;
     const h = this.canvas.height;
-    const targetSize = Math.min(w * 0.5, h * 0.42);
-    const size = this.spriteInstance?.size ?? 18;
-    const cellSize = targetSize / size;
-    return { originX: w / 2 - targetSize / 2, originY: h * 0.08, cellSize };
+
+    const hudSafeTop = 76;
+    const kbSafeBottom = 168;
+    const usableTop = hudSafeTop;
+    const usableBottom = Math.max(usableTop + 240, h - kbSafeBottom);
+    const usableH = usableBottom - usableTop;
+
+    const spriteBandH = usableH * 0.52;
+    const captionBandH = usableH * 0.16;
+    const cannonBandH = usableH - spriteBandH - captionBandH;
+
+    const spriteBandTop = usableTop;
+    const captionBandTop = spriteBandTop + spriteBandH;
+    const cannonBandTop = captionBandTop + captionBandH;
+
+    const spriteSize = this.spriteInstance?.size ?? 18;
+    const spriteTargetSize = Math.min(w * 0.42, spriteBandH * 0.86);
+    const spriteOriginX = w / 2 - spriteTargetSize / 2;
+    const spriteOriginY = spriteBandTop + (spriteBandH - spriteTargetSize) / 2;
+
+    const cannonWidth = Math.min(w * 0.13, 72);
+    const cannonY = cannonBandTop + cannonBandH * 0.82; // 接地ライン（台座下端）
+
+    return {
+      sprite: { originX: spriteOriginX, originY: spriteOriginY, cellSize: spriteTargetSize / spriteSize },
+      cannon: { x: w / 2, y: cannonY, width: cannonWidth },
+      captionCenterY: captionBandTop + captionBandH / 2,
+    };
   },
 
-  getCannonLayout() {
-    const w = this.canvas.width;
-    const h = this.canvas.height;
-    return { x: w / 2, y: h * 0.6, width: Math.min(w * 0.16, 90) };
+  positionCaption() {
+    const layout = this.getLayout();
+    this.captionEl.style.top = `${Math.round(layout.captionCenterY)}px`;
   },
 
   startNextWord() {
@@ -114,6 +143,7 @@ export const gameScene = {
   },
 
   renderCaption() {
+    this.positionCaption();
     const segments = this.typingSession.getDisplaySegments();
     this.captionEl.innerHTML = '';
 
@@ -162,8 +192,9 @@ export const gameScene = {
   },
 
   fireLaserForKeystroke(result) {
-    const spriteLayout = this.getSpriteLayout();
-    const cannonLayout = this.getCannonLayout();
+    const layout = this.getLayout();
+    const spriteLayout = layout.sprite;
+    const cannonLayout = layout.cannon;
     const totalCells = this.spriteInstance.totalCount();
     const totalKeystrokes = this.typingSession.getTotalKeystrokes();
     const cellsToDestroy = computeCellsToDestroy(
@@ -206,7 +237,7 @@ export const gameScene = {
   },
 
   completeWord() {
-    const spriteLayout = this.getSpriteLayout();
+    const spriteLayout = this.getLayout().sprite;
     const remaining = this.spriteInstance.remainingCount();
     if (remaining > 0) {
       this.spriteInstance.destroyNext(remaining, spriteLayout.originX, spriteLayout.originY, spriteLayout.cellSize);
@@ -279,13 +310,13 @@ export const gameScene = {
     ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.starfield?.draw(ctx);
 
+    const layout = this.getLayout();
+
     if (this.spriteInstance) {
-      const layout = this.getSpriteLayout();
-      this.spriteInstance.draw(ctx, layout.originX, layout.originY, layout.cellSize);
+      this.spriteInstance.draw(ctx, layout.sprite.originX, layout.sprite.originY, layout.sprite.cellSize);
     }
 
-    const cannonLayout = this.getCannonLayout();
-    this.cannon?.draw(ctx, cannonLayout.x, cannonLayout.y, cannonLayout.width);
+    this.cannon?.draw(ctx, layout.cannon.x, layout.cannon.y, layout.cannon.width);
 
     this.laserSystem?.draw(ctx);
     this.particles?.draw(ctx);

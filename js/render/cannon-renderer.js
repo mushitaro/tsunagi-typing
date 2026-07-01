@@ -1,15 +1,17 @@
-const FLASH_DURATION_MS = 90;
+/**
+ * プレイヤーの大砲。1978年のスペースインベーダーの自機（台座+中央の砲身ノブだけの
+ * 極めてシンプルなシルエット）を踏襲したドット絵グリッドを、単色で描く。
+ */
+const CANNON_GRID = ['.....XXX.....', '.....XXX.....', 'XXXXXXXXXXXXX', 'XXXXXXXXXXXXX', 'XXXXXXXXXXXXX'];
+const GRID_W = 13;
+const GRID_H = CANNON_GRID.length;
 
-const BODY_COLOR = '#2b2a24';
-const BODY_SHADE = '#1c1b17';
-const BARREL_COLOR = '#3a382f';
-const BARREL_HILITE = '#57544a';
-const TRIM_COLOR = '#7dd3c0';
+const CANNON_COLOR = '#f3f1ea';
 const FLASH_CORE = '#f3d18a';
 const FLASH_OUTER = '#e8a355';
+const FLASH_DURATION_MS = 90;
 
 /**
- * プレイヤーの大砲を作る。
  * @returns {{draw: Function, flash: Function, update: Function, getMuzzlePoint: Function}}
  */
 export function createCannon() {
@@ -20,84 +22,56 @@ export function createCannon() {
   }
 
   function update(dt) {
-    if (flashTimer > 0) {
-      flashTimer = Math.max(0, flashTimer - dt);
-    }
+    if (flashTimer > 0) flashTimer = Math.max(0, flashTimer - dt);
   }
 
   /**
    * @param {number} x 大砲の中心x（canvas座標）
-   * @param {number} y 大砲の上端y（canvas座標）
-   * @param {number} width 大砲の描画幅の目安（px）
+   * @param {number} y 大砲の接地ライン（台座の下端、canvas座標）
+   * @param {number} width 大砲の描画幅
    */
   function getMuzzlePoint(x, y, width) {
-    const barrelHeight = width * 0.62;
-    return { x, y: y - barrelHeight };
+    const cellSize = width / GRID_W;
+    const totalHeight = GRID_H * cellSize;
+    return { x, y: y - totalHeight };
   }
 
-  /**
-   * ブロック状のレトロ大砲を描画する。(x, y) は大砲の中心・上端の基準。
-   */
+  /** (x, y) は大砲の中心・接地ライン（台座の下端）。そこから上方向に描画する。 */
   function draw(ctx, x, y, width) {
-    const w = width;
-    const baseHeight = w * 0.5;
-    const barrelWidth = w * 0.34;
-    const barrelHeight = w * 0.62;
+    const cellSize = width / GRID_W;
+    const totalHeight = GRID_H * cellSize;
+    const originX = x - width / 2;
+    const originY = y - totalHeight;
 
     ctx.save();
+    ctx.fillStyle = CANNON_COLOR;
+    for (let row = 0; row < GRID_H; row++) {
+      const line = CANNON_GRID[row];
+      for (let col = 0; col < GRID_W; col++) {
+        if (line[col] !== 'X') continue;
+        ctx.fillRect(
+          Math.round(originX + col * cellSize),
+          Math.round(originY + row * cellSize),
+          Math.ceil(cellSize),
+          Math.ceil(cellSize),
+        );
+      }
+    }
 
-    // 台座（左右に張り出したブロック）
-    const baseW = w;
-    const baseH = baseHeight;
-    const baseX = x - baseW / 2;
-    const baseY = y - baseH * 0.15;
-    ctx.fillStyle = BODY_SHADE;
-    ctx.fillRect(Math.round(baseX), Math.round(baseY), Math.round(baseW), Math.round(baseH));
-
-    ctx.fillStyle = BODY_COLOR;
-    const innerPad = w * 0.06;
-    ctx.fillRect(
-      Math.round(baseX + innerPad),
-      Math.round(baseY),
-      Math.round(baseW - innerPad * 2),
-      Math.round(baseH - innerPad)
-    );
-
-    // トリムライン（TSUNAGIブランドのアクセント）
-    ctx.fillStyle = TRIM_COLOR;
-    ctx.fillRect(Math.round(baseX + innerPad), Math.round(baseY + baseH * 0.28), Math.round(baseW - innerPad * 2), Math.max(1, Math.round(w * 0.035)));
-
-    // 砲身（中央、上に伸びる矩形）
-    const barrelX = x - barrelWidth / 2;
-    const barrelY = y - barrelHeight;
-    ctx.fillStyle = BARREL_COLOR;
-    ctx.fillRect(Math.round(barrelX), Math.round(barrelY), Math.round(barrelWidth), Math.round(barrelHeight));
-
-    // 砲身ハイライト（左側の細い筋、ピクセル感を出す）
-    ctx.fillStyle = BARREL_HILITE;
-    ctx.fillRect(Math.round(barrelX + barrelWidth * 0.12), Math.round(barrelY), Math.max(1, Math.round(barrelWidth * 0.2)), Math.round(barrelHeight));
-
-    // 砲口の縁取り
-    ctx.fillStyle = BODY_SHADE;
-    ctx.fillRect(Math.round(barrelX - barrelWidth * 0.08), Math.round(barrelY), Math.round(barrelWidth * 1.16), Math.max(1, Math.round(w * 0.05)));
-
-    // マズルフラッシュ
     if (flashTimer > 0) {
       const t = flashTimer / FLASH_DURATION_MS; // 1 -> 0
-      const muzzle = getMuzzlePoint(x, y, w);
-      const outerR = w * 0.32 * t;
-      const innerR = w * 0.16 * t;
+      const muzzle = getMuzzlePoint(x, y, width);
 
       ctx.globalAlpha = 0.85 * t + 0.15;
       ctx.fillStyle = FLASH_OUTER;
       ctx.beginPath();
-      ctx.arc(muzzle.x, muzzle.y, Math.max(0, outerR), 0, Math.PI * 2);
+      ctx.arc(muzzle.x, muzzle.y, Math.max(0, cellSize * 1.6 * t), 0, Math.PI * 2);
       ctx.fill();
 
       ctx.globalAlpha = 1;
       ctx.fillStyle = FLASH_CORE;
       ctx.beginPath();
-      ctx.arc(muzzle.x, muzzle.y, Math.max(0, innerR), 0, Math.PI * 2);
+      ctx.arc(muzzle.x, muzzle.y, Math.max(0, cellSize * 0.8 * t), 0, Math.PI * 2);
       ctx.fill();
     }
 

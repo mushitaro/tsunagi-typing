@@ -279,10 +279,11 @@
 }
 
 .word-caption {
+  /* top は game-scene.js が実測レイアウトに合わせて動的に設定する（大砲・スプライトと重ならないように） */
   position: absolute;
   left: 50%;
-  bottom: 34%;
-  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
   z-index: 3;
   text-align: center;
   display: flex;
