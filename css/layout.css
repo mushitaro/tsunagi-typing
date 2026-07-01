@@ -63,12 +63,14 @@ body {
   overflow-y: auto;
 }
 
+/* ゲーム本体の見出しはデジタルドット文字。筆文字（--font-display）は
+   TSUNAGIブランド名の表示（.brand-mark）専用に予約する。 */
 .screen-heading {
-  font-family: var(--font-display);
+  font-family: var(--font-pixel);
   font-weight: 400;
-  font-synthesis-weight: none;
-  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-size: clamp(1.1rem, 4vw, 1.6rem);
   letter-spacing: 0.04em;
+  line-height: 1.6;
   color: var(--color-ink);
   margin: 0;
   text-align: center;
