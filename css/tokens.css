@@ -3,20 +3,22 @@
    このアプリは Tailwind を使わないため、素の CSS カスタムプロパティとして再定義する。 */
 :root {
   --font-display: "Yuji Syuku", "Hiragino Mincho ProN", "Yu Mincho", serif;
-  --font-sans: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
-    "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif;
-  --font-pixel: "PixelHUD", "Zen Kaku Gothic New", monospace;
+  /* デジタルドット文字（レトロ液晶/ドットマトリクス風）。DotGothic16は和文ドットフォント。 */
+  --font-sans: "DotGothic16", "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans", "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif;
+  --font-pixel: "Press Start 2P", "DotGothic16", "Zen Kaku Gothic New", monospace;
   --font-mono: ui-monospace, "SFMono-Regular", "Consolas", monospace;
 
-  --color-paper: #141310;
-  --color-surface: #1c1b17;
-  --color-surface-raised: #232220;
+  /* CSLシミュレーター等、TSUNAGIの濃色系アプリで使われる基準の黒 #0a0a0a に統一 */
+  --color-paper: #0a0a0a;
+  --color-surface: #141210;
+  --color-surface-raised: #1e1c19;
   --color-ink: #f3f1ea;
   --color-ink-soft: #c9c6bc;
   --color-muted: #8f8c81;
   --color-faint: #6b6962;
-  --color-line: #312f2a;
-  --color-line-strong: #46443d;
+  --color-line: #2a2721;
+  --color-line-strong: #3d3930;
 
   --color-brand: #f3f1ea;
   --color-brand-ink: #ffffff;

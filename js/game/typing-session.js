@@ -2,14 +2,19 @@ import { buildMatchPlan, createMatcher } from '../romaji/romaji-matcher.js';
 import { createPlainMatcher } from '../romaji/plain-matcher.js';
 
 /**
- * 1単語ぶんの入力セッション。JA/ENの違いを吸収し、画面表示・破壊マッピング双方が使う統一APIを提供する。
+ * 1単語ぶんの入力セッション。画面表示・破壊マッピング双方が使う統一APIを提供する。
+ *
+ * 入力方式は言語ではなく単語エントリの形で決まる:
+ *   typing.kana がある       → ローマ字/かな入力（romaji-matcher）
+ *   typing.targetText のみ   → 直接入力（plain-matcher）— EN全般、および
+ *                               さんすうの数字・記号（例:「15」→ 1,5 / 「+」→ + をそのまま打つ）
  */
-export function createTypingSession(wordEntry, lang) {
-  const isJa = lang === 'ja';
+export function createTypingSession(wordEntry) {
+  const isRomaji = !!wordEntry.typing.kana;
   let plan = null;
   let matcher;
 
-  if (isJa) {
+  if (isRomaji) {
     plan = buildMatchPlan(wordEntry.typing.kana);
     matcher = createMatcher(plan);
   } else {
@@ -37,11 +42,11 @@ export function createTypingSession(wordEntry, lang) {
 
   /**
    * キャプション表示用のセグメント配列を返す。
-   * JAはユニット（かな1〜2文字ぶん）単位、ENは1文字単位。
+   * ローマ字入力はユニット（かな1〜2文字ぶん）単位、直接入力は1文字単位。
    * state: 'done' | 'current' | 'pending'
    */
   function getDisplaySegments() {
-    if (isJa) {
+    if (isRomaji) {
       const { cursorUnit } = matcher.getProgress();
       return plan.units.map((u, i) => ({
         text: u.displayRomaji,

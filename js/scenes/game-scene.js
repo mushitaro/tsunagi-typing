@@ -92,7 +92,7 @@ export const gameScene = {
     }
 
     this.currentWord = word;
-    this.typingSession = createTypingSession(word, this.language);
+    this.typingSession = createTypingSession(word);
     this.spriteInstance = createSpriteInstance(word.spriteId, word.spriteVariant, this.spriteLibrary);
     this.wordStartTime = performance.now();
 
@@ -275,7 +275,7 @@ export const gameScene = {
 
   render() {
     const ctx = this.ctx2d;
-    ctx.fillStyle = '#141310';
+    ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.starfield?.draw(ctx);
 

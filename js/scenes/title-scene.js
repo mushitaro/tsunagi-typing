@@ -101,7 +101,7 @@ export const titleScene = {
 
   render() {
     const ctx = this.ctx2d;
-    ctx.fillStyle = '#141310';
+    ctx.fillStyle = '#0a0a0a';
     ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.starfield?.draw(ctx);
 

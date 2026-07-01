@@ -35,8 +35,10 @@ for cat in manifest["categories"]:
         pal = w["spriteVariant"]["palette"]
         if pal not in palette_names:
             errors.append(f"unknown palette {pal} in {w['id']}")
-        if "kana" not in w["typing"] or "romajiCanonical" not in w["typing"]:
-            errors.append(f"missing typing fields in {w['id']}")
+        has_romaji = "kana" in w["typing"] and "romajiCanonical" in w["typing"]
+        has_direct = "targetText" in w["typing"]
+        if not has_romaji and not has_direct:
+            errors.append(f"missing typing fields (need kana+romajiCanonical, or targetText) in {w['id']}")
 
     en_ids = set()
     for w in en_list:
