@@ -1,0 +1,17 @@
+{
+  "sea-teal": { "X": "#5fb8ad", "O": "#2f6b63" },
+  "sea-orange": { "X": "#e0904a", "O": "#a85f28" },
+  "sea-purple": { "X": "#a97fc4", "O": "#6e4a8f" },
+  "sea-blue": { "X": "#5b8fd9", "O": "#33568c" },
+  "sea-pink": { "X": "#e08aa0", "O": "#a85068" },
+  "sea-yellow": { "X": "#e0c94a", "O": "#a88f28" },
+  "sea-green": { "X": "#7fbf6b", "O": "#4a8f38" },
+  "sea-red": { "X": "#d9705f", "O": "#a8402f" },
+  "sea-mono": { "X": "#f3f1ea", "O": "#8f8c81" },
+  "math-blue": { "X": "#5b8fd9", "O": "#f3f1ea" },
+  "math-orange": { "X": "#e8a355", "O": "#f3f1ea" },
+  "math-pink": { "X": "#d9738f", "O": "#f3f1ea" },
+  "math-teal": { "X": "#7dd3c0", "O": "#f3f1ea" },
+  "math-green": { "X": "#8fc46b", "O": "#f3f1ea" },
+  "math-mono": { "X": "#f3f1ea", "O": "#c9c6bc" }
+}

@@ -1,0 +1,16 @@
+{
+  "categories": [
+    {
+      "id": "sea-creatures",
+      "labelJa": "うみのいきもの",
+      "labelEn": "Sea Creatures",
+      "files": { "ja": "sea-creatures.ja.json", "en": "sea-creatures.en.json" }
+    },
+    {
+      "id": "math",
+      "labelJa": "さんすう",
+      "labelEn": "Math",
+      "files": { "ja": "math.ja.json", "en": "math.en.json" }
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+/* ── デザイントークン — TSUNAGI ブランド（墨と和紙）をレトロアーケード基調に転用 ──
+   tsunagi-startup/src/styles/global.css の @theme と同じトークン名・値を踏襲。
+   このアプリは Tailwind を使わないため、素の CSS カスタムプロパティとして再定義する。 */
+:root {
+  --font-display: "Yuji Syuku", "Hiragino Mincho ProN", "Yu Mincho", serif;
+  --font-sans: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+    "Yu Gothic UI", "Noto Sans JP", system-ui, sans-serif;
+  --font-pixel: "PixelHUD", "Zen Kaku Gothic New", monospace;
+  --font-mono: ui-monospace, "SFMono-Regular", "Consolas", monospace;
+
+  --color-paper: #141310;
+  --color-surface: #1c1b17;
+  --color-surface-raised: #232220;
+  --color-ink: #f3f1ea;
+  --color-ink-soft: #c9c6bc;
+  --color-muted: #8f8c81;
+  --color-faint: #6b6962;
+  --color-line: #312f2a;
+  --color-line-strong: #46443d;
+
+  --color-brand: #f3f1ea;
+  --color-brand-ink: #ffffff;
+  --color-brand-soft: #232220;
+  --color-accent: #8f8c81;
+
+  /* レトロアーケード用アクセント（TSUNAGIの無彩色パレットに彩度を絞って追加） */
+  --color-laser: #7dd3c0;
+  --color-laser-glow: #b8ece0;
+  --color-explosion: #e8a355;
+  --color-explosion-hot: #f3d18a;
+  --color-wrong: #b8564f;
+  --color-ok: #f3f1ea;
+  --color-warn: #e8a355;
+
+  /* TSUNAGI流儀: 角丸ゼロ・影なし・ヘアラインで区切る */
+  --radius: 0;
+  --shadow-card: none;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+}

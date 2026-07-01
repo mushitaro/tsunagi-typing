@@ -1,0 +1,29 @@
+# タイピング・インベーダー（TSUNAGI Typing）
+
+未就学児・小学生向けの、レトロ・スペースインベーダー風タイピング練習ゲーム。正しくタイプするたびにレーザーがドット絵の単語（海の生き物・さんすう）を破壊していく。日本語（ローマ字入力）／英語モード対応。バックエンドなし、スコアは端末内 localStorage のみ。
+
+## ローカルで動かす
+
+ES Modules と Service Worker を使うため `file://` では動作しない。ローカルサーバーが必要:
+
+```sh
+python -m http.server 8000
+# または
+npx serve .
+```
+
+`http://localhost:8000` を開く。
+
+## 構成
+
+- ビルドステップなし（素の HTML/CSS/JS、ES Modules）
+- `js/data/` — 単語データ・スプライトデータの読み込み
+- `js/romaji/` — ローマ字/かな入力判定エンジン
+- `js/render/` — Canvas 2D 描画（ドット絵破壊・レーザー・パーティクル）
+- `js/game/` — ゲームロジック（出題・スコア・破壊マッピング）
+- `js/profile/` — プロフィール/スコアの localStorage 永続化
+- `js/scenes/` — 画面遷移
+
+## デプロイ
+
+`main` への push で GitHub Actions が GitHub Pages にそのままデプロイする（ビルドステップなし）。詳細は `.github/workflows/deploy.yml` を参照。

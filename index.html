@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+<meta name="theme-color" content="#141310" />
+<meta name="description" content="海の生き物とさんすうで学ぶ、レトロ風タイピングゲーム" />
+<title>タイピング・インベーダー | TSUNAGI</title>
+<link rel="manifest" href="./manifest.json" />
+<link rel="icon" href="./icons/icon-192.png" />
+<link rel="apple-touch-icon" href="./icons/icon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap"
+/>
+<link rel="stylesheet" href="./css/tokens.css" />
+<link rel="stylesheet" href="./css/layout.css" />
+<link rel="stylesheet" href="./css/crt.css" />
+<link rel="stylesheet" href="./css/components.css" />
+</head>
+<body>
+<div id="app" class="app">
+
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <section class="scene" data-scene="title">
+    <canvas id="title-canvas" class="scene-canvas"></canvas>
+    <div class="title-overlay">
+      <p class="brand-mark">繋 TSUNAGI</p>
+      <h1 class="brand-title">タイピング<br>インベーダー</h1>
+      <p class="blink-prompt" id="title-prompt">クリック または キーをおしてね</p>
+    </div>
+  </section>
+
+  <section class="scene" data-scene="profile-select">
+    <div class="screen-pad">
+      <h2 class="screen-heading">だれが あそぶ？</h2>
+      <div class="profile-grid" id="profile-grid"></div>
+      <button class="ghost-btn" id="new-profile-btn" type="button">＋ あたらしく つくる</button>
+    </div>
+  </section>
+
+  <section class="scene" data-scene="profile-create">
+    <div class="screen-pad">
+      <h2 class="screen-heading">なまえは？</h2>
+      <input class="name-input" id="name-input" type="text" maxlength="10" placeholder="なまえ（なくてもOK）" />
+      <h3 class="screen-subheading">アイコンをえらんでね</h3>
+      <div class="avatar-grid" id="avatar-grid"></div>
+      <div class="button-row">
+        <button class="secondary-btn" id="cancel-create-btn" type="button">もどる</button>
+        <button class="primary-btn" id="confirm-create-btn" type="button">つくる！</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene" data-scene="mode-select">
+    <div class="screen-pad">
+      <h2 class="screen-heading">なにで れんしゅうする？</h2>
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="げんご">
+        <button class="lang-btn" data-lang="ja" type="button">あ<span class="lang-btn-sub">にほんご</span></button>
+        <button class="lang-btn" data-lang="en" type="button">A<span class="lang-btn-sub">English</span></button>
+      </div>
+      <div class="category-grid" id="category-grid"></div>
+      <button class="primary-btn primary-btn--big" id="start-round-btn" type="button">スタート</button>
+      <button class="ghost-btn" id="back-to-profiles-btn" type="button">← プロフィールにもどる</button>
+    </div>
+  </section>
+
+  <section class="scene" data-scene="game">
+    <div class="game-frame">
+      <div class="game-hud" id="game-hud">
+        <div class="hud-left">
+          <span class="hud-label">score</span>
+          <span class="hud-value" id="hud-score">0</span>
+        </div>
+        <div class="hud-center" id="hud-progress">0 / 10</div>
+        <div class="hud-right">
+          <button class="speaker-btn" id="speaker-btn" type="button" aria-label="よみあげる">🔊</button>
+          <button class="pause-btn" id="pause-btn" type="button" aria-label="メニューへ">✕</button>
+        </div>
+      </div>
+      <canvas id="game-canvas" class="scene-canvas"></canvas>
+      <div class="word-caption" id="word-caption"></div>
+      <div class="keyboard-overlay" id="keyboard-overlay"></div>
+    </div>
+  </section>
+
+  <section class="scene" data-scene="results">
+    <div class="screen-pad">
+      <h2 class="screen-heading">クリア！</h2>
+      <div class="results-summary" id="results-summary"></div>
+      <div class="button-row">
+        <button class="secondary-btn" id="menu-btn" type="button">メニューへ</button>
+        <button class="primary-btn" id="replay-btn" type="button">もういちど</button>
+      </div>
+    </div>
+  </section>
+
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

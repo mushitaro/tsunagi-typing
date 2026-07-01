@@ -1,0 +1,381 @@
+/* ── 共通ボタン ───────────────────────────────── */
+.primary-btn,
+.secondary-btn,
+.ghost-btn {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: var(--space-3) var(--space-6);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+
+.primary-btn:hover,
+.primary-btn:focus-visible {
+  transform: translateY(-1px);
+}
+
+.primary-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
+.primary-btn--big {
+  font-size: 1.3rem;
+  padding: var(--space-4) var(--space-7);
+}
+
+.secondary-btn {
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.secondary-btn:hover {
+  background: var(--color-surface-raised);
+}
+
+.ghost-btn {
+  background: transparent;
+  color: var(--color-muted);
+  border-color: var(--color-line);
+  font-size: 0.9rem;
+  padding: var(--space-2) var(--space-4);
+}
+
+.ghost-btn:hover {
+  color: var(--color-ink);
+  border-color: var(--color-line-strong);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+.button-row {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ── タイトル画面 ───────────────────────────────── */
+.title-overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.brand-mark {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-synthesis-weight: none;
+  color: var(--color-muted);
+  letter-spacing: 0.15em;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.brand-title {
+  font-family: var(--font-pixel);
+  font-size: clamp(1.6rem, 6vw, 3rem);
+  line-height: 1.4;
+  color: var(--color-ink);
+  margin: 0;
+  text-shadow: 0 0 12px rgba(243, 241, 234, 0.35);
+}
+
+.title-overlay .blink-prompt {
+  font-size: 1rem;
+  color: var(--color-ink-soft);
+  margin-top: var(--space-4);
+}
+
+/* ── プロフィール選択 ───────────────────────────── */
+.profile-grid,
+.avatar-grid,
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.profile-card,
+.avatar-cell,
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  cursor: pointer;
+  min-height: 110px;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.08s ease;
+}
+
+.profile-card:hover,
+.avatar-cell:hover,
+.category-card:hover {
+  border-color: var(--color-line-strong);
+  background: var(--color-surface-raised);
+}
+
+.profile-card:active,
+.avatar-cell:active,
+.category-card:active {
+  transform: scale(0.97);
+}
+
+.profile-card.is-selected,
+.avatar-cell.is-selected,
+.category-card.is-selected {
+  border-color: var(--color-ink);
+  background: var(--color-surface-raised);
+}
+
+.profile-card canvas,
+.avatar-cell canvas,
+.category-card canvas {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+}
+
+.profile-card-name {
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.profile-card-best {
+  font-size: 0.75rem;
+  color: var(--color-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+.name-input {
+  width: 100%;
+  max-width: 320px;
+  padding: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line-strong);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.name-input:focus-visible {
+  outline: 2px solid var(--color-ink);
+}
+
+/* ── モード選択 ───────────────────────────────── */
+.lang-toggle {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.lang-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  font-family: var(--font-pixel);
+  font-size: 1.8rem;
+  padding: var(--space-4) var(--space-6);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.lang-btn-sub {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  color: var(--color-muted);
+}
+
+.lang-btn.is-selected {
+  border-color: var(--color-ink);
+  background: var(--color-surface-raised);
+}
+
+.category-card-label {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+}
+
+/* ── ゲーム画面 HUD ───────────────────────────── */
+.game-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(to bottom, rgba(20, 19, 16, 0.85), rgba(20, 19, 16, 0));
+  font-family: var(--font-pixel);
+}
+
+.hud-left {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.hud-label {
+  font-size: 0.7rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+}
+
+.hud-value {
+  font-size: 1.3rem;
+  color: var(--color-ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-center {
+  font-size: 0.9rem;
+  color: var(--color-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.hud-right {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.speaker-btn,
+.pause-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.speaker-btn:hover,
+.pause-btn:hover {
+  background: var(--color-surface-raised);
+}
+
+.word-caption {
+  position: absolute;
+  left: 50%;
+  bottom: 34%;
+  transform: translateX(-50%);
+  z-index: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  pointer-events: none;
+}
+
+.word-caption-main {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  color: var(--color-ink);
+  letter-spacing: 0.08em;
+}
+
+.word-caption-sub {
+  font-family: var(--font-pixel);
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+}
+
+.word-caption-sub .char {
+  color: var(--color-faint);
+}
+
+.word-caption-sub .char.is-done {
+  color: var(--color-laser);
+}
+
+.word-caption-sub .char.is-next {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ── オンスクリーンキーボード ───────────────────── */
+.keyboard-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: var(--space-4);
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  pointer-events: none;
+}
+
+.kb-row {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.kb-key {
+  min-width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--color-faint);
+  border: 1px solid var(--color-line);
+  background: rgba(28, 27, 23, 0.7);
+  text-transform: lowercase;
+}
+
+.kb-key.is-next {
+  color: var(--color-paper);
+  background: var(--color-laser);
+  border-color: var(--color-laser);
+}
+
+/* ── 結果画面 ───────────────────────────────── */
+.results-summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  align-items: center;
+  font-family: var(--font-mono);
+  color: var(--color-ink-soft);
+  font-size: 1rem;
+}
+
+.results-summary .results-highlight {
+  font-family: var(--font-pixel);
+  font-size: 1.8rem;
+  color: var(--color-ink);
+}
+
+@media (max-width: 480px) {
+  .kb-key { min-width: 20px; height: 22px; font-size: 0.6rem; }
+}
