@@ -11,6 +11,12 @@
       "labelJa": "さんすう",
       "labelEn": "Math",
       "files": { "ja": "math.ja.json", "en": "math.en.json" }
+    },
+    {
+      "id": "sharks",
+      "labelJa": "さめ",
+      "labelEn": "Sharks",
+      "files": { "ja": "sharks.ja.json", "en": "sharks.en.json" }
     }
   ]
 }

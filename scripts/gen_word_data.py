@@ -201,6 +201,44 @@ OPERATOR_CONCEPTS = [
     ("op-equals", "=", "いこーる", "equals", "op-equals-01", "math-mono"),
 ]
 
+# ═══════════════════════════════════════════════════════════════
+# さめ (sharks) — 専用スプライトが無いため shark-01 を色違い/反転で使い回す。
+# マニアックな深海種(ラブカ・ミツクリザメ・メガマウス等)も含め、できるだけ多くの
+# 実在するサメの和名を収録する。
+# (conceptId, hiragana, english)
+# ═══════════════════════════════════════════════════════════════
+SHARK_CONCEPTS = [
+    ("great-white-shark", "ほほじろざめ", "great white shark"),
+    ("hammerhead-shark", "しゅもくざめ", "hammerhead shark"),
+    ("shark-whale-shark", "じんべえざめ", "whale shark"),
+    ("mako-shark", "あおざめ", "mako shark"),
+    ("tiger-shark", "いたちざめ", "tiger shark"),
+    ("bullhead-shark", "ねこざめ", "bullhead shark"),
+    ("houndshark", "どちざめ", "houndshark"),
+    ("blue-shark", "よしきりざめ", "blue shark"),
+    ("sawshark", "のこぎりざめ", "sawshark"),
+    ("sand-tiger-shark", "しろわに", "sand tiger shark"),
+    ("bull-shark", "おおめじろざめ", "bull shark"),
+    ("requiem-shark", "めじろざめ", "requiem shark"),
+    ("blacktip-reef-shark", "つまぐろ", "blacktip reef shark"),
+    ("catshark", "とらざめ", "catshark"),
+    ("frilled-shark", "らぶか", "frilled shark"),
+    ("goblin-shark", "みつくりざめ", "goblin shark"),
+    ("sixgill-shark", "かぐらざめ", "sixgill shark"),
+    ("dogfish-shark", "つのざめ", "dogfish shark"),
+    ("angel-shark", "かすざめ", "angel shark"),
+    ("thresher-shark", "おながざめ", "thresher shark"),
+    ("great-hammerhead", "しろしゅもくざめ", "great hammerhead"),
+    ("scalloped-hammerhead", "あかしゅもくざめ", "scalloped hammerhead"),
+    ("bamboo-shark", "いぬざめ", "bamboo shark"),
+    ("nurse-shark", "こもりざめ", "nurse shark"),
+    ("basking-shark", "うばざめ", "basking shark"),
+    ("megamouth-shark", "めがまうす", "megamouth shark"),
+    ("sleeper-shark", "おんでんざめ", "sleeper shark"),
+]
+
+SHARK_PALETTES = ["sea-mono", "sea-blue", "sea-teal", "sea-purple", "sea-green", "sea-orange", "sea-red", "sea-yellow", "sea-pink"]
+
 
 def build_sea_lists():
     ja_list = []
@@ -248,15 +286,33 @@ def build_math_lists():
     return ja_list, en_list
 
 
+def build_shark_lists():
+    ja_list = []
+    en_list = []
+    for i, (concept_id, hira, en_word) in enumerate(SHARK_CONCEPTS):
+        palette = SHARK_PALETTES[i % len(SHARK_PALETTES)]
+        mirror = (i // len(SHARK_PALETTES)) % 2 == 1
+        ja_list.append(
+            romaji_entry(f"shark-ja-{concept_id}", concept_id, "sharks", hira, None, "shark-01", palette, mirror)
+        )
+        en_list.append(
+            en_entry(f"shark-en-{concept_id}", concept_id, "sharks", en_word, "shark-01", palette, mirror)
+        )
+    return ja_list, en_list
+
+
 def main():
     sea_ja, sea_en = build_sea_lists()
     math_ja, math_en = build_math_lists()
+    shark_ja, shark_en = build_shark_lists()
 
     files = {
         "sea-creatures.ja.json": sea_ja,
         "sea-creatures.en.json": sea_en,
         "math.ja.json": math_ja,
         "math.en.json": math_en,
+        "sharks.ja.json": shark_ja,
+        "sharks.en.json": shark_en,
     }
     for filename, entries in files.items():
         with open(os.path.join(BASE, filename), "w", encoding="utf-8") as f:

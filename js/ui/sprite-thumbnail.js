@@ -37,4 +37,5 @@ export function avatarVariant(avatarId) {
 export const CATEGORY_ICONS = {
   'sea-creatures': { spriteId: 'octopus-01', palette: 'sea-purple' },
   math: { spriteId: 'shape-star-01', palette: 'math-green' },
+  sharks: { spriteId: 'shark-01', palette: 'sea-mono' },
 };

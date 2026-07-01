@@ -1,0 +1,470 @@
+[
+  {
+    "id": "shark-en-great-white-shark",
+    "conceptId": "great-white-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "great white shark"
+    },
+    "typing": {
+      "targetText": "great white shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "shark-en-hammerhead-shark",
+    "conceptId": "hammerhead-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "hammerhead shark"
+    },
+    "typing": {
+      "targetText": "hammerhead shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "shark-en-shark-whale-shark",
+    "conceptId": "shark-whale-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "whale shark"
+    },
+    "typing": {
+      "targetText": "whale shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "shark-en-mako-shark",
+    "conceptId": "mako-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "mako shark"
+    },
+    "typing": {
+      "targetText": "mako shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "shark-en-tiger-shark",
+    "conceptId": "tiger-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "tiger shark"
+    },
+    "typing": {
+      "targetText": "tiger shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "shark-en-bullhead-shark",
+    "conceptId": "bullhead-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "bullhead shark"
+    },
+    "typing": {
+      "targetText": "bullhead shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "shark-en-houndshark",
+    "conceptId": "houndshark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "houndshark"
+    },
+    "typing": {
+      "targetText": "houndshark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "shark-en-blue-shark",
+    "conceptId": "blue-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "blue shark"
+    },
+    "typing": {
+      "targetText": "blue shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "shark-en-sawshark",
+    "conceptId": "sawshark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "sawshark"
+    },
+    "typing": {
+      "targetText": "sawshark"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "shark-en-sand-tiger-shark",
+    "conceptId": "sand-tiger-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "sand tiger shark"
+    },
+    "typing": {
+      "targetText": "sand tiger shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-bull-shark",
+    "conceptId": "bull-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "bull shark"
+    },
+    "typing": {
+      "targetText": "bull shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-requiem-shark",
+    "conceptId": "requiem-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "requiem shark"
+    },
+    "typing": {
+      "targetText": "requiem shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-teal",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-blacktip-reef-shark",
+    "conceptId": "blacktip-reef-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "blacktip reef shark"
+    },
+    "typing": {
+      "targetText": "blacktip reef shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-purple",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-catshark",
+    "conceptId": "catshark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "catshark"
+    },
+    "typing": {
+      "targetText": "catshark"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-green",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-frilled-shark",
+    "conceptId": "frilled-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "frilled shark"
+    },
+    "typing": {
+      "targetText": "frilled shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-goblin-shark",
+    "conceptId": "goblin-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "goblin shark"
+    },
+    "typing": {
+      "targetText": "goblin shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-red",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-sixgill-shark",
+    "conceptId": "sixgill-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "sixgill shark"
+    },
+    "typing": {
+      "targetText": "sixgill shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-yellow",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-dogfish-shark",
+    "conceptId": "dogfish-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "dogfish shark"
+    },
+    "typing": {
+      "targetText": "dogfish shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-pink",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-en-angel-shark",
+    "conceptId": "angel-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "angel shark"
+    },
+    "typing": {
+      "targetText": "angel shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "shark-en-thresher-shark",
+    "conceptId": "thresher-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "thresher shark"
+    },
+    "typing": {
+      "targetText": "thresher shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "shark-en-great-hammerhead",
+    "conceptId": "great-hammerhead",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "great hammerhead"
+    },
+    "typing": {
+      "targetText": "great hammerhead"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "shark-en-scalloped-hammerhead",
+    "conceptId": "scalloped-hammerhead",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "scalloped hammerhead"
+    },
+    "typing": {
+      "targetText": "scalloped hammerhead"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "shark-en-bamboo-shark",
+    "conceptId": "bamboo-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "bamboo shark"
+    },
+    "typing": {
+      "targetText": "bamboo shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "shark-en-nurse-shark",
+    "conceptId": "nurse-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "nurse shark"
+    },
+    "typing": {
+      "targetText": "nurse shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "shark-en-basking-shark",
+    "conceptId": "basking-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "basking shark"
+    },
+    "typing": {
+      "targetText": "basking shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "shark-en-megamouth-shark",
+    "conceptId": "megamouth-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "megamouth shark"
+    },
+    "typing": {
+      "targetText": "megamouth shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "shark-en-sleeper-shark",
+    "conceptId": "sleeper-shark",
+    "category": "sharks",
+    "lang": "en",
+    "display": {
+      "word": "sleeper shark"
+    },
+    "typing": {
+      "targetText": "sleeper shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  }
+]

@@ -1,0 +1,497 @@
+[
+  {
+    "id": "shark-ja-great-white-shark",
+    "conceptId": "great-white-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ほほじろざめ"
+    },
+    "typing": {
+      "kana": "ほほじろざめ",
+      "romajiCanonical": "hohojirozame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "shark-ja-hammerhead-shark",
+    "conceptId": "hammerhead-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "しゅもくざめ"
+    },
+    "typing": {
+      "kana": "しゅもくざめ",
+      "romajiCanonical": "shumokuzame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "shark-ja-shark-whale-shark",
+    "conceptId": "shark-whale-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "じんべえざめ"
+    },
+    "typing": {
+      "kana": "じんべえざめ",
+      "romajiCanonical": "jinbeezame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "shark-ja-mako-shark",
+    "conceptId": "mako-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あおざめ"
+    },
+    "typing": {
+      "kana": "あおざめ",
+      "romajiCanonical": "aozame"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "shark-ja-tiger-shark",
+    "conceptId": "tiger-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いたちざめ"
+    },
+    "typing": {
+      "kana": "いたちざめ",
+      "romajiCanonical": "itachizame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "shark-ja-bullhead-shark",
+    "conceptId": "bullhead-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ねこざめ"
+    },
+    "typing": {
+      "kana": "ねこざめ",
+      "romajiCanonical": "nekozame"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "shark-ja-houndshark",
+    "conceptId": "houndshark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "どちざめ"
+    },
+    "typing": {
+      "kana": "どちざめ",
+      "romajiCanonical": "dochizame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "shark-ja-blue-shark",
+    "conceptId": "blue-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "よしきりざめ"
+    },
+    "typing": {
+      "kana": "よしきりざめ",
+      "romajiCanonical": "yoshikirizame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "shark-ja-sawshark",
+    "conceptId": "sawshark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "のこぎりざめ"
+    },
+    "typing": {
+      "kana": "のこぎりざめ",
+      "romajiCanonical": "nokogirizame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "shark-ja-sand-tiger-shark",
+    "conceptId": "sand-tiger-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "しろわに"
+    },
+    "typing": {
+      "kana": "しろわに",
+      "romajiCanonical": "shirowani"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-bull-shark",
+    "conceptId": "bull-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "おおめじろざめ"
+    },
+    "typing": {
+      "kana": "おおめじろざめ",
+      "romajiCanonical": "oomejirozame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-requiem-shark",
+    "conceptId": "requiem-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "めじろざめ"
+    },
+    "typing": {
+      "kana": "めじろざめ",
+      "romajiCanonical": "mejirozame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-teal",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-blacktip-reef-shark",
+    "conceptId": "blacktip-reef-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "つまぐろ"
+    },
+    "typing": {
+      "kana": "つまぐろ",
+      "romajiCanonical": "tsumaguro"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-purple",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-catshark",
+    "conceptId": "catshark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "とらざめ"
+    },
+    "typing": {
+      "kana": "とらざめ",
+      "romajiCanonical": "torazame"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-green",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-frilled-shark",
+    "conceptId": "frilled-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "らぶか"
+    },
+    "typing": {
+      "kana": "らぶか",
+      "romajiCanonical": "rabuka"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-goblin-shark",
+    "conceptId": "goblin-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "みつくりざめ"
+    },
+    "typing": {
+      "kana": "みつくりざめ",
+      "romajiCanonical": "mitsukurizame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-red",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-sixgill-shark",
+    "conceptId": "sixgill-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かぐらざめ"
+    },
+    "typing": {
+      "kana": "かぐらざめ",
+      "romajiCanonical": "kagurazame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-yellow",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-dogfish-shark",
+    "conceptId": "dogfish-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "つのざめ"
+    },
+    "typing": {
+      "kana": "つのざめ",
+      "romajiCanonical": "tsunozame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-pink",
+      "mirror": true
+    }
+  },
+  {
+    "id": "shark-ja-angel-shark",
+    "conceptId": "angel-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かすざめ"
+    },
+    "typing": {
+      "kana": "かすざめ",
+      "romajiCanonical": "kasuzame"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "shark-ja-thresher-shark",
+    "conceptId": "thresher-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "おながざめ"
+    },
+    "typing": {
+      "kana": "おながざめ",
+      "romajiCanonical": "onagazame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "shark-ja-great-hammerhead",
+    "conceptId": "great-hammerhead",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "しろしゅもくざめ"
+    },
+    "typing": {
+      "kana": "しろしゅもくざめ",
+      "romajiCanonical": "shiroshumokuzame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "shark-ja-scalloped-hammerhead",
+    "conceptId": "scalloped-hammerhead",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あかしゅもくざめ"
+    },
+    "typing": {
+      "kana": "あかしゅもくざめ",
+      "romajiCanonical": "akashumokuzame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "shark-ja-bamboo-shark",
+    "conceptId": "bamboo-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いぬざめ"
+    },
+    "typing": {
+      "kana": "いぬざめ",
+      "romajiCanonical": "inuzame"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "shark-ja-nurse-shark",
+    "conceptId": "nurse-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "こもりざめ"
+    },
+    "typing": {
+      "kana": "こもりざめ",
+      "romajiCanonical": "komorizame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "shark-ja-basking-shark",
+    "conceptId": "basking-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "うばざめ"
+    },
+    "typing": {
+      "kana": "うばざめ",
+      "romajiCanonical": "ubazame"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "shark-ja-megamouth-shark",
+    "conceptId": "megamouth-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "めがまうす"
+    },
+    "typing": {
+      "kana": "めがまうす",
+      "romajiCanonical": "megamausu"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "shark-ja-sleeper-shark",
+    "conceptId": "sleeper-shark",
+    "category": "sharks",
+    "lang": "ja",
+    "display": {
+      "hiragana": "おんでんざめ"
+    },
+    "typing": {
+      "kana": "おんでんざめ",
+      "romajiCanonical": "ondenzame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  }
+]

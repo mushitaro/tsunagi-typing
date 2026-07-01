@@ -4,7 +4,7 @@
    外部オリジン（Google Fonts）は Network-First → Cache フォールバック。
    ═══════════════════════════════════════ */
 
-const CACHE_NAME = 'tsunagi-typing-v5';
+const CACHE_NAME = 'tsunagi-typing-v6';
 
 const STATIC_ASSETS = [
   './',
@@ -35,6 +35,8 @@ const STATIC_ASSETS = [
   './js/data/words/math.ja.json',
   './js/data/words/sea-creatures.en.json',
   './js/data/words/sea-creatures.ja.json',
+  './js/data/words/sharks.en.json',
+  './js/data/words/sharks.ja.json',
 
   './js/romaji/kana-table.js',
   './js/romaji/plain-matcher.js',
