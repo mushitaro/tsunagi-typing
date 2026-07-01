@@ -1,35 +1,1242 @@
 [
-  { "id": "sea-ja-octopus", "conceptId": "octopus", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "たこ" }, "typing": { "kana": "たこ", "romajiCanonical": "tako" }, "difficulty": 1, "spriteId": "octopus-01", "spriteVariant": { "palette": "sea-purple" } },
-  { "id": "sea-ja-crab", "conceptId": "crab", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "かに" }, "typing": { "kana": "かに", "romajiCanonical": "kani" }, "difficulty": 1, "spriteId": "crab-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-ja-pufferfish", "conceptId": "pufferfish", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "ふぐ" }, "typing": { "kana": "ふぐ", "romajiCanonical": "fugu" }, "difficulty": 1, "spriteId": "pufferfish-01", "spriteVariant": { "palette": "sea-yellow" } },
-  { "id": "sea-ja-dolphin", "conceptId": "dolphin", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "いるか" }, "typing": { "kana": "いるか", "romajiCanonical": "iruka" }, "difficulty": 1, "spriteId": "dolphin-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-ja-whale", "conceptId": "whale", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "くじら" }, "typing": { "kana": "くじら", "romajiCanonical": "kujira" }, "difficulty": 2, "spriteId": "whale-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-ja-shark", "conceptId": "shark", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "さめ" }, "typing": { "kana": "さめ", "romajiCanonical": "same" }, "difficulty": 1, "spriteId": "shark-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-ja-shrimp", "conceptId": "shrimp", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "えび" }, "typing": { "kana": "えび", "romajiCanonical": "ebi" }, "difficulty": 1, "spriteId": "shrimp-01", "spriteVariant": { "palette": "sea-pink" } },
-  { "id": "sea-ja-spiny-lobster", "conceptId": "spiny-lobster", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "いせえび" }, "typing": { "kana": "いせえび", "romajiCanonical": "iseebi" }, "difficulty": 2, "spriteId": "lobster-01", "spriteVariant": { "palette": "sea-red" } },
-  { "id": "sea-ja-squid", "conceptId": "squid", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "いか" }, "typing": { "kana": "いか", "romajiCanonical": "ika" }, "difficulty": 1, "spriteId": "squid-01", "spriteVariant": { "palette": "sea-purple", "mirror": true } },
-  { "id": "sea-ja-turtle", "conceptId": "turtle", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "かめ" }, "typing": { "kana": "かめ", "romajiCanonical": "kame" }, "difficulty": 1, "spriteId": "turtle-01", "spriteVariant": { "palette": "sea-green" } },
-  { "id": "sea-ja-seal", "conceptId": "seal", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "あざらし" }, "typing": { "kana": "あざらし", "romajiCanonical": "azarashi" }, "difficulty": 2, "spriteId": "seal-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-ja-coral", "conceptId": "coral", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "さんご" }, "typing": { "kana": "さんご", "romajiCanonical": "sango" }, "difficulty": 2, "spriteId": "coral-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-ja-wave", "conceptId": "wave", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "なみ" }, "typing": { "kana": "なみ", "romajiCanonical": "nami" }, "difficulty": 1, "spriteId": "wave-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-ja-anchor", "conceptId": "anchor", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "いかり" }, "typing": { "kana": "いかり", "romajiCanonical": "ikari" }, "difficulty": 1, "spriteId": "anchor-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-ja-boat", "conceptId": "boat", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "ふね" }, "typing": { "kana": "ふね", "romajiCanonical": "fune" }, "difficulty": 1, "spriteId": "boat-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-ja-oyster", "conceptId": "oyster", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "かき" }, "typing": { "kana": "かき", "romajiCanonical": "kaki" }, "difficulty": 1, "spriteId": "oyster-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-ja-penguin", "conceptId": "penguin", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "ぺんぎん" }, "typing": { "kana": "ぺんぎん", "romajiCanonical": "pengin" }, "difficulty": 2, "spriteId": "penguin-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-ja-sea-otter", "conceptId": "sea-otter", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "らっこ" }, "typing": { "kana": "らっこ", "romajiCanonical": "rakko" }, "difficulty": 2, "spriteId": "otter-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-ja-starfish", "conceptId": "starfish", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "ひとで" }, "typing": { "kana": "ひとで", "romajiCanonical": "hitode" }, "difficulty": 1, "spriteId": "starfish-01", "spriteVariant": { "palette": "sea-yellow" } },
-  { "id": "sea-ja-crocodile", "conceptId": "crocodile", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "わに" }, "typing": { "kana": "わに", "romajiCanonical": "wani" }, "difficulty": 1, "spriteId": "crocodile-01", "spriteVariant": { "palette": "sea-green" } },
-  { "id": "sea-ja-swan", "conceptId": "swan", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "はくちょう" }, "typing": { "kana": "はくちょう", "romajiCanonical": "hakuchou" }, "difficulty": 3, "spriteId": "swan-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-ja-frog", "conceptId": "frog", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "かえる" }, "typing": { "kana": "かえる", "romajiCanonical": "kaeru" }, "difficulty": 2, "spriteId": "frog-01", "spriteVariant": { "palette": "sea-green" } },
-  { "id": "sea-ja-snail", "conceptId": "snail", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "かたつむり" }, "typing": { "kana": "かたつむり", "romajiCanonical": "katatsumuri" }, "difficulty": 3, "spriteId": "snail-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-ja-jellyfish", "conceptId": "jellyfish", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "くらげ" }, "typing": { "kana": "くらげ", "romajiCanonical": "kurage" }, "difficulty": 2, "spriteId": "jellyfish-01", "spriteVariant": { "palette": "sea-pink" } },
-  { "id": "sea-ja-goldfish", "conceptId": "goldfish", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "きんぎょ" }, "typing": { "kana": "きんぎょ", "romajiCanonical": "kingyo" }, "difficulty": 2, "spriteId": "fish-tropical-01", "spriteVariant": { "palette": "sea-red" } },
-  { "id": "sea-ja-tropical-fish", "conceptId": "tropical-fish", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "ねったいぎょ" }, "typing": { "kana": "ねったいぎょ", "romajiCanonical": "nettaigyo" }, "difficulty": 3, "spriteId": "fish-tropical-01", "spriteVariant": { "palette": "sea-yellow", "mirror": true } },
-  { "id": "sea-ja-fish", "conceptId": "fish", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "さかな" }, "typing": { "kana": "さかな", "romajiCanonical": "sakana" }, "difficulty": 1, "spriteId": "fish-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-ja-blue-whale", "conceptId": "blue-whale", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "しろながすくじら" }, "typing": { "kana": "しろながすくじら", "romajiCanonical": "shironagasukujira" }, "difficulty": 3, "spriteId": "whale-02", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-ja-shell", "conceptId": "shell", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "かい" }, "typing": { "kana": "かい", "romajiCanonical": "kai" }, "difficulty": 1, "spriteId": "shell-01", "spriteVariant": { "palette": "sea-yellow" } },
-  { "id": "sea-ja-mackerel", "conceptId": "mackerel", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "さば" }, "typing": { "kana": "さば", "romajiCanonical": "saba" }, "difficulty": 1, "spriteId": "fish-01", "spriteVariant": { "palette": "sea-mono", "mirror": true } },
-  { "id": "sea-ja-tuna", "conceptId": "tuna", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "まぐろ" }, "typing": { "kana": "まぐろ", "romajiCanonical": "maguro" }, "difficulty": 2, "spriteId": "fish-01", "spriteVariant": { "palette": "sea-purple" } },
-  { "id": "sea-ja-sea-bream", "conceptId": "sea-bream", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "たい" }, "typing": { "kana": "たい", "romajiCanonical": "tai" }, "difficulty": 1, "spriteId": "fish-tropical-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-ja-whale-shark", "conceptId": "whale-shark", "category": "sea-creatures", "lang": "ja", "display": { "hiragana": "じんべえざめ" }, "typing": { "kana": "じんべえざめ", "romajiCanonical": "jinbeezame" }, "difficulty": 3, "spriteId": "shark-01", "spriteVariant": { "palette": "sea-blue", "mirror": true } }
+  {
+    "id": "sea-ja-octopus",
+    "conceptId": "octopus",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "たこ"
+    },
+    "typing": {
+      "kana": "たこ",
+      "romajiCanonical": "tako"
+    },
+    "difficulty": 1,
+    "spriteId": "octopus-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-ja-crab",
+    "conceptId": "crab",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かに"
+    },
+    "typing": {
+      "kana": "かに",
+      "romajiCanonical": "kani"
+    },
+    "difficulty": 1,
+    "spriteId": "crab-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-ja-pufferfish",
+    "conceptId": "pufferfish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ふぐ"
+    },
+    "typing": {
+      "kana": "ふぐ",
+      "romajiCanonical": "fugu"
+    },
+    "difficulty": 1,
+    "spriteId": "pufferfish-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-ja-dolphin",
+    "conceptId": "dolphin",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いるか"
+    },
+    "typing": {
+      "kana": "いるか",
+      "romajiCanonical": "iruka"
+    },
+    "difficulty": 2,
+    "spriteId": "dolphin-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-ja-whale",
+    "conceptId": "whale",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "くじら"
+    },
+    "typing": {
+      "kana": "くじら",
+      "romajiCanonical": "kujira"
+    },
+    "difficulty": 2,
+    "spriteId": "whale-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-ja-shark",
+    "conceptId": "shark",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "さめ"
+    },
+    "typing": {
+      "kana": "さめ",
+      "romajiCanonical": "same"
+    },
+    "difficulty": 1,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-shrimp",
+    "conceptId": "shrimp",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "えび"
+    },
+    "typing": {
+      "kana": "えび",
+      "romajiCanonical": "ebi"
+    },
+    "difficulty": 1,
+    "spriteId": "shrimp-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-ja-spiny-lobster",
+    "conceptId": "spiny-lobster",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いせえび"
+    },
+    "typing": {
+      "kana": "いせえび",
+      "romajiCanonical": "iseebi"
+    },
+    "difficulty": 2,
+    "spriteId": "lobster-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "sea-ja-squid",
+    "conceptId": "squid",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いか"
+    },
+    "typing": {
+      "kana": "いか",
+      "romajiCanonical": "ika"
+    },
+    "difficulty": 1,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-purple",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-turtle",
+    "conceptId": "turtle",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かめ"
+    },
+    "typing": {
+      "kana": "かめ",
+      "romajiCanonical": "kame"
+    },
+    "difficulty": 1,
+    "spriteId": "turtle-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-ja-seal",
+    "conceptId": "seal",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あざらし"
+    },
+    "typing": {
+      "kana": "あざらし",
+      "romajiCanonical": "azarashi"
+    },
+    "difficulty": 2,
+    "spriteId": "seal-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-coral",
+    "conceptId": "coral",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "さんご"
+    },
+    "typing": {
+      "kana": "さんご",
+      "romajiCanonical": "sango"
+    },
+    "difficulty": 2,
+    "spriteId": "coral-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-ja-wave",
+    "conceptId": "wave",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "なみ"
+    },
+    "typing": {
+      "kana": "なみ",
+      "romajiCanonical": "nami"
+    },
+    "difficulty": 1,
+    "spriteId": "wave-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-ja-anchor",
+    "conceptId": "anchor",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いかり"
+    },
+    "typing": {
+      "kana": "いかり",
+      "romajiCanonical": "ikari"
+    },
+    "difficulty": 2,
+    "spriteId": "anchor-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-boat",
+    "conceptId": "boat",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ふね"
+    },
+    "typing": {
+      "kana": "ふね",
+      "romajiCanonical": "fune"
+    },
+    "difficulty": 1,
+    "spriteId": "boat-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-ja-oyster",
+    "conceptId": "oyster",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かき"
+    },
+    "typing": {
+      "kana": "かき",
+      "romajiCanonical": "kaki"
+    },
+    "difficulty": 1,
+    "spriteId": "oyster-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-penguin",
+    "conceptId": "penguin",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ぺんぎん"
+    },
+    "typing": {
+      "kana": "ぺんぎん",
+      "romajiCanonical": "pengin"
+    },
+    "difficulty": 2,
+    "spriteId": "penguin-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-sea-otter",
+    "conceptId": "sea-otter",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "らっこ"
+    },
+    "typing": {
+      "kana": "らっこ",
+      "romajiCanonical": "rakko"
+    },
+    "difficulty": 2,
+    "spriteId": "otter-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-ja-starfish",
+    "conceptId": "starfish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ひとで"
+    },
+    "typing": {
+      "kana": "ひとで",
+      "romajiCanonical": "hitode"
+    },
+    "difficulty": 2,
+    "spriteId": "starfish-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-ja-crocodile",
+    "conceptId": "crocodile",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "わに"
+    },
+    "typing": {
+      "kana": "わに",
+      "romajiCanonical": "wani"
+    },
+    "difficulty": 1,
+    "spriteId": "crocodile-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-ja-swan",
+    "conceptId": "swan",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "はくちょう"
+    },
+    "typing": {
+      "kana": "はくちょう",
+      "romajiCanonical": "hakuchou"
+    },
+    "difficulty": 2,
+    "spriteId": "swan-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-frog",
+    "conceptId": "frog",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かえる"
+    },
+    "typing": {
+      "kana": "かえる",
+      "romajiCanonical": "kaeru"
+    },
+    "difficulty": 2,
+    "spriteId": "frog-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-ja-snail",
+    "conceptId": "snail",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かたつむり"
+    },
+    "typing": {
+      "kana": "かたつむり",
+      "romajiCanonical": "katatsumuri"
+    },
+    "difficulty": 3,
+    "spriteId": "snail-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-ja-jellyfish",
+    "conceptId": "jellyfish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "くらげ"
+    },
+    "typing": {
+      "kana": "くらげ",
+      "romajiCanonical": "kurage"
+    },
+    "difficulty": 2,
+    "spriteId": "jellyfish-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-ja-goldfish",
+    "conceptId": "goldfish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "きんぎょ"
+    },
+    "typing": {
+      "kana": "きんぎょ",
+      "romajiCanonical": "kingyo"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "sea-ja-tropical-fish",
+    "conceptId": "tropical-fish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ねったいぎょ"
+    },
+    "typing": {
+      "kana": "ねったいぎょ",
+      "romajiCanonical": "nettaigyo"
+    },
+    "difficulty": 3,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-yellow",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-fish",
+    "conceptId": "fish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "さかな"
+    },
+    "typing": {
+      "kana": "さかな",
+      "romajiCanonical": "sakana"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-ja-blue-whale",
+    "conceptId": "blue-whale",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "しろながすくじら"
+    },
+    "typing": {
+      "kana": "しろながすくじら",
+      "romajiCanonical": "shironagasukujira"
+    },
+    "difficulty": 3,
+    "spriteId": "whale-02",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-shell",
+    "conceptId": "shell",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かい"
+    },
+    "typing": {
+      "kana": "かい",
+      "romajiCanonical": "kai"
+    },
+    "difficulty": 1,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-ja-mackerel",
+    "conceptId": "mackerel",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "さば"
+    },
+    "typing": {
+      "kana": "さば",
+      "romajiCanonical": "saba"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-mono",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-tuna",
+    "conceptId": "tuna",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "まぐろ"
+    },
+    "typing": {
+      "kana": "まぐろ",
+      "romajiCanonical": "maguro"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-ja-sea-bream",
+    "conceptId": "sea-bream",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "たい"
+    },
+    "typing": {
+      "kana": "たい",
+      "romajiCanonical": "tai"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-ja-whale-shark",
+    "conceptId": "whale-shark",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "じんべえざめ"
+    },
+    "typing": {
+      "kana": "じんべえざめ",
+      "romajiCanonical": "jinbeezame"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-horse-mackerel",
+    "conceptId": "horse-mackerel",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あじ"
+    },
+    "typing": {
+      "kana": "あじ",
+      "romajiCanonical": "aji"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-ja-sardine",
+    "conceptId": "sardine",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いわし"
+    },
+    "typing": {
+      "kana": "いわし",
+      "romajiCanonical": "iwashi"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-teal",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-bonito",
+    "conceptId": "bonito",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かつお"
+    },
+    "typing": {
+      "kana": "かつお",
+      "romajiCanonical": "katsuo"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-red",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-yellowtail",
+    "conceptId": "yellowtail",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ぶり"
+    },
+    "typing": {
+      "kana": "ぶり",
+      "romajiCanonical": "buri"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-ja-saury",
+    "conceptId": "saury",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "さんま"
+    },
+    "typing": {
+      "kana": "さんま",
+      "romajiCanonical": "sanma"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-ja-flounder",
+    "conceptId": "flounder",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ひらめ"
+    },
+    "typing": {
+      "kana": "ひらめ",
+      "romajiCanonical": "hirame"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-green",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-flatfish",
+    "conceptId": "flatfish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "かれい"
+    },
+    "typing": {
+      "kana": "かれい",
+      "romajiCanonical": "karei"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-conger-eel",
+    "conceptId": "conger-eel",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あなご"
+    },
+    "typing": {
+      "kana": "あなご",
+      "romajiCanonical": "anago"
+    },
+    "difficulty": 2,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-ja-eel",
+    "conceptId": "eel",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "うなぎ"
+    },
+    "typing": {
+      "kana": "うなぎ",
+      "romajiCanonical": "unagi"
+    },
+    "difficulty": 2,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-carp",
+    "conceptId": "carp",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "こい"
+    },
+    "typing": {
+      "kana": "こい",
+      "romajiCanonical": "koi"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-ja-loach",
+    "conceptId": "loach",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "どじょう"
+    },
+    "typing": {
+      "kana": "どじょう",
+      "romajiCanonical": "dojou"
+    },
+    "difficulty": 2,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "sea-ja-young-yellowtail",
+    "conceptId": "young-yellowtail",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "はまち"
+    },
+    "typing": {
+      "kana": "はまち",
+      "romajiCanonical": "hamachi"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-ja-cod",
+    "conceptId": "cod",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "たら"
+    },
+    "typing": {
+      "kana": "たら",
+      "romajiCanonical": "tara"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-purple",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-salmon",
+    "conceptId": "salmon",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "さけ"
+    },
+    "typing": {
+      "kana": "さけ",
+      "romajiCanonical": "sake"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-pink",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-herring",
+    "conceptId": "herring",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "にしん"
+    },
+    "typing": {
+      "kana": "にしん",
+      "romajiCanonical": "nishin"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-ja-killifish",
+    "conceptId": "killifish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "めだか"
+    },
+    "typing": {
+      "kana": "めだか",
+      "romajiCanonical": "medaka"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-teal",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-king-crab",
+    "conceptId": "king-crab",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "たらばがに"
+    },
+    "typing": {
+      "kana": "たらばがに",
+      "romajiCanonical": "tarabagani"
+    },
+    "difficulty": 3,
+    "spriteId": "crab-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "sea-ja-snow-crab",
+    "conceptId": "snow-crab",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ずわいがに"
+    },
+    "typing": {
+      "kana": "ずわいがに",
+      "romajiCanonical": "zuwaigani"
+    },
+    "difficulty": 3,
+    "spriteId": "crab-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-mantis-shrimp",
+    "conceptId": "mantis-shrimp",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "しゃこ"
+    },
+    "typing": {
+      "kana": "しゃこ",
+      "romajiCanonical": "shako"
+    },
+    "difficulty": 2,
+    "spriteId": "shrimp-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-ja-short-neck-clam",
+    "conceptId": "short-neck-clam",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あさり"
+    },
+    "typing": {
+      "kana": "あさり",
+      "romajiCanonical": "asari"
+    },
+    "difficulty": 2,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-hard-clam",
+    "conceptId": "hard-clam",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "はまぐり"
+    },
+    "typing": {
+      "kana": "はまぐり",
+      "romajiCanonical": "hamaguri"
+    },
+    "difficulty": 2,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-ja-freshwater-clam",
+    "conceptId": "freshwater-clam",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "しじみ"
+    },
+    "typing": {
+      "kana": "しじみ",
+      "romajiCanonical": "shijimi"
+    },
+    "difficulty": 2,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-ja-scallop",
+    "conceptId": "scallop",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ほたて"
+    },
+    "typing": {
+      "kana": "ほたて",
+      "romajiCanonical": "hotate"
+    },
+    "difficulty": 2,
+    "spriteId": "oyster-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-ja-moon-jellyfish",
+    "conceptId": "moon-jellyfish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "みずくらげ"
+    },
+    "typing": {
+      "kana": "みずくらげ",
+      "romajiCanonical": "mizukurage"
+    },
+    "difficulty": 3,
+    "spriteId": "jellyfish-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-red-jellyfish",
+    "conceptId": "red-jellyfish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あかくらげ"
+    },
+    "typing": {
+      "kana": "あかくらげ",
+      "romajiCanonical": "akakurage"
+    },
+    "difficulty": 3,
+    "spriteId": "jellyfish-01",
+    "spriteVariant": {
+      "palette": "sea-red",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-sperm-whale",
+    "conceptId": "sperm-whale",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "まっこうくじら"
+    },
+    "typing": {
+      "kana": "まっこうくじら",
+      "romajiCanonical": "makkoukujira"
+    },
+    "difficulty": 3,
+    "spriteId": "whale-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-ja-orca",
+    "conceptId": "orca",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "しゃち"
+    },
+    "typing": {
+      "kana": "しゃち",
+      "romajiCanonical": "shachi"
+    },
+    "difficulty": 2,
+    "spriteId": "dolphin-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-ja-narwhal",
+    "conceptId": "narwhal",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "いっかく"
+    },
+    "typing": {
+      "kana": "いっかく",
+      "romajiCanonical": "ikkaku"
+    },
+    "difficulty": 2,
+    "spriteId": "whale-02",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-ja-giant-octopus",
+    "conceptId": "giant-octopus",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "みずだこ"
+    },
+    "typing": {
+      "kana": "みずだこ",
+      "romajiCanonical": "mizudako"
+    },
+    "difficulty": 2,
+    "spriteId": "octopus-01",
+    "spriteVariant": {
+      "palette": "sea-blue",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-cuttlefish",
+    "conceptId": "cuttlefish",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "こういか"
+    },
+    "typing": {
+      "kana": "こういか",
+      "romajiCanonical": "kouika"
+    },
+    "difficulty": 2,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-yellow",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-spear-squid",
+    "conceptId": "spear-squid",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "やりいか"
+    },
+    "typing": {
+      "kana": "やりいか",
+      "romajiCanonical": "yariika"
+    },
+    "difficulty": 2,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-ja-surf-clam",
+    "conceptId": "surf-clam",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "ほっきがい"
+    },
+    "typing": {
+      "kana": "ほっきがい",
+      "romajiCanonical": "hokkigai"
+    },
+    "difficulty": 2,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-ja-abalone",
+    "conceptId": "abalone",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あわび"
+    },
+    "typing": {
+      "kana": "あわび",
+      "romajiCanonical": "awabi"
+    },
+    "difficulty": 2,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-ja-duck",
+    "conceptId": "duck",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "あひる"
+    },
+    "typing": {
+      "kana": "あひる",
+      "romajiCanonical": "ahiru"
+    },
+    "difficulty": 2,
+    "spriteId": "duck-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "sea-ja-mermaid",
+    "conceptId": "mermaid",
+    "category": "sea-creatures",
+    "lang": "ja",
+    "display": {
+      "hiragana": "にんぎょ"
+    },
+    "typing": {
+      "kana": "にんぎょ",
+      "romajiCanonical": "ningyo"
+    },
+    "difficulty": 2,
+    "spriteId": "mermaid-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  }
 ]

@@ -89,6 +89,25 @@ def gen_text_sprite(sprite_id, category, tags, text, font_path, fallback_path, s
     return {"id": sprite_id, "size": GRID, "rows": rows, "paletteKey": "X", "tags": tags, "category": category}
 
 
+def gen_shape_sprite(sprite_id, category, tags, draw_fn):
+    """絵文字に存在しない図形を PIL の描画プリミティブで直接、正確に描く。"""
+    canvas = Image.new("RGBA", (CANVAS, CANVAS), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(canvas)
+    pad = int(CANVAS * 0.1)
+    draw_fn(draw, pad, CANVAS - pad)
+    rows = canvas_to_grid(canvas, mono_char="X")
+    return {"id": sprite_id, "size": GRID, "rows": rows, "paletteKey": "X", "tags": tags, "category": category}
+
+
+def regular_polygon_points(cx, cy, radius, n_sides, rotation_deg=-90):
+    import math
+    pts = []
+    for i in range(n_sides):
+        angle = math.radians(rotation_deg + i * (360 / n_sides))
+        pts.append((cx + radius * math.cos(angle), cy + radius * math.sin(angle)))
+    return pts
+
+
 SEA_SPRITES = [
     ("octopus-01", ["sea", "octopus", "cephalopod"], "\U0001F419"),
     ("crab-01", ["sea", "crab", "crustacean"], "\U0001F980"),
@@ -118,11 +137,12 @@ SEA_SPRITES = [
     ("frog-01", ["sea", "frog", "amphibian"], "\U0001F438"),
     ("snail-01", ["sea", "snail"], "\U0001F40C"),
     ("jellyfish-01", ["sea", "jellyfish"], "\U0001FAFC"),
+    ("duck-01", ["sea", "duck", "bird"], "\U0001F986"),
+    ("mermaid-01", ["sea", "mermaid"], "\U0001F9DC"),
 ]
 
 MATH_EMOJI_SPRITES = [
     ("shape-circle-01", ["math", "shape", "circle"], "\U0001F534"),
-    ("shape-square-01", ["math", "shape", "square"], "⬛"),
     ("shape-triangle-01", ["math", "shape", "triangle"], "\U0001F53A"),
     ("shape-diamond-01", ["math", "shape", "diamond"], "\U0001F536"),
     ("shape-star-01", ["math", "shape", "star"], "⭐"),
@@ -132,13 +152,67 @@ MATH_EMOJI_SPRITES = [
     ("op-divide-01", ["math", "operator", "divide"], "➗"),
 ]
 
-DIGIT_RANGE = list(range(0, 21))  # 0-20（算数の数詞として幅広く使う）
+DIGIT_RANGE = list(range(0, 31)) + [40, 50, 60, 70, 80, 90, 100]  # 0-30 + 切りのよい十の位〜100
 
 COUNTER_SPRITES = [
     ("unit-hiki-01", ["math", "counter", "hiki"], "匹", "jp"),   # 匹
     ("unit-ko-01", ["math", "counter", "ko"], "個", "jp"),       # 個
     ("unit-hon-01", ["math", "counter", "hon"], "本", "jp"),     # 本
     ("op-equals-01", ["math", "operator", "equals"], "=", "latin"),
+    ("unit-mai-01", ["math", "counter", "mai"], "枚", "jp"),     # 枚
+    ("unit-dai-01", ["math", "counter", "dai"], "台", "jp"),     # 台
+    ("unit-satsu-01", ["math", "counter", "satsu"], "冊", "jp"),  # 冊
+    ("unit-nin-01", ["math", "counter", "nin"], "人", "jp"),     # 人
+    ("unit-wa-01", ["math", "counter", "wa"], "羽", "jp"),       # 羽
+]
+
+WEEKDAY_SPRITES = [
+    # 3文字（○曜日）だと18x18グリッドに収まらず潰れるため、代表の1文字だけを描く
+    # （読み・タイピング対象は「げつようび」等フルで扱う。ドット絵は象徴の1文字）
+    ("weekday-mon-01", ["math", "weekday", "monday"], "月"),
+    ("weekday-tue-01", ["math", "weekday", "tuesday"], "火"),
+    ("weekday-wed-01", ["math", "weekday", "wednesday"], "水"),
+    ("weekday-thu-01", ["math", "weekday", "thursday"], "木"),
+    ("weekday-fri-01", ["math", "weekday", "friday"], "金"),
+    ("weekday-sat-01", ["math", "weekday", "saturday"], "土"),
+    ("weekday-sun-01", ["math", "weekday", "sunday"], "日"),
+]
+
+SOLID = (0, 0, 0, 255)  # canvas_to_grid はアルファ値だけを見るので色自体は何でもよい
+
+
+def draw_square(d, p0, p1):
+    d.rectangle([p0, p0, p1, p1], fill=SOLID)
+
+
+def draw_rectangle(d, p0, p1):
+    h = p1 - p0
+    inset = h * 0.16  # 正方形と区別するため縦方向を少し狭める
+    d.rectangle([p0, p0 + inset, p1, p1 - inset], fill=SOLID)
+
+
+def draw_pentagon(d, p0, p1):
+    c = (p0 + p1) / 2
+    d.polygon(regular_polygon_points(c, c, (p1 - p0) / 2, 5), fill=SOLID)
+
+
+def draw_hexagon(d, p0, p1):
+    c = (p0 + p1) / 2
+    d.polygon(regular_polygon_points(c, c, (p1 - p0) / 2, 6), fill=SOLID)
+
+
+def draw_oval(d, p0, p1):
+    h = p1 - p0
+    inset = h * 0.14
+    d.ellipse([p0, p0 + inset, p1, p1 - inset], fill=SOLID)
+
+
+SHAPE_EXTRA_SPRITES = [
+    ("shape-square-01", ["math", "shape", "square"], draw_square),
+    ("shape-rectangle-01", ["math", "shape", "rectangle"], draw_rectangle),
+    ("shape-pentagon-01", ["math", "shape", "pentagon"], draw_pentagon),
+    ("shape-hexagon-01", ["math", "shape", "hexagon"], draw_hexagon),
+    ("shape-oval-01", ["math", "shape", "oval"], draw_oval),
 ]
 
 
@@ -162,6 +236,12 @@ def main():
             sprites.append(gen_text_sprite(sid, "math", tags, text, JP_FONT, JP_FONT_FALLBACK))
         else:
             sprites.append(gen_text_sprite(sid, "math", tags, text, LATIN_FONT, LATIN_FONT))
+
+    for sid, tags, text in WEEKDAY_SPRITES:
+        sprites.append(gen_text_sprite(sid, "math", tags, text, JP_FONT, JP_FONT_FALLBACK))
+
+    for sid, tags, draw_fn in SHAPE_EXTRA_SPRITES:
+        sprites.append(gen_shape_sprite(sid, "math", tags, draw_fn))
 
     out_dir = os.path.join(os.path.dirname(__file__), "..", "js", "data", "sprites")
     os.makedirs(out_dir, exist_ok=True)

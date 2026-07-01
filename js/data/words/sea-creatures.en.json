@@ -1,35 +1,1174 @@
 [
-  { "id": "sea-en-octopus", "conceptId": "octopus", "category": "sea-creatures", "lang": "en", "display": { "word": "octopus" }, "typing": { "targetText": "octopus" }, "difficulty": 2, "spriteId": "octopus-01", "spriteVariant": { "palette": "sea-purple" } },
-  { "id": "sea-en-crab", "conceptId": "crab", "category": "sea-creatures", "lang": "en", "display": { "word": "crab" }, "typing": { "targetText": "crab" }, "difficulty": 1, "spriteId": "crab-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-en-pufferfish", "conceptId": "pufferfish", "category": "sea-creatures", "lang": "en", "display": { "word": "pufferfish" }, "typing": { "targetText": "pufferfish" }, "difficulty": 3, "spriteId": "pufferfish-01", "spriteVariant": { "palette": "sea-yellow" } },
-  { "id": "sea-en-dolphin", "conceptId": "dolphin", "category": "sea-creatures", "lang": "en", "display": { "word": "dolphin" }, "typing": { "targetText": "dolphin" }, "difficulty": 2, "spriteId": "dolphin-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-en-whale", "conceptId": "whale", "category": "sea-creatures", "lang": "en", "display": { "word": "whale" }, "typing": { "targetText": "whale" }, "difficulty": 1, "spriteId": "whale-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-en-shark", "conceptId": "shark", "category": "sea-creatures", "lang": "en", "display": { "word": "shark" }, "typing": { "targetText": "shark" }, "difficulty": 1, "spriteId": "shark-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-en-shrimp", "conceptId": "shrimp", "category": "sea-creatures", "lang": "en", "display": { "word": "shrimp" }, "typing": { "targetText": "shrimp" }, "difficulty": 2, "spriteId": "shrimp-01", "spriteVariant": { "palette": "sea-pink" } },
-  { "id": "sea-en-spiny-lobster", "conceptId": "spiny-lobster", "category": "sea-creatures", "lang": "en", "display": { "word": "lobster" }, "typing": { "targetText": "lobster" }, "difficulty": 2, "spriteId": "lobster-01", "spriteVariant": { "palette": "sea-red" } },
-  { "id": "sea-en-squid", "conceptId": "squid", "category": "sea-creatures", "lang": "en", "display": { "word": "squid" }, "typing": { "targetText": "squid" }, "difficulty": 1, "spriteId": "squid-01", "spriteVariant": { "palette": "sea-purple", "mirror": true } },
-  { "id": "sea-en-turtle", "conceptId": "turtle", "category": "sea-creatures", "lang": "en", "display": { "word": "turtle" }, "typing": { "targetText": "turtle" }, "difficulty": 2, "spriteId": "turtle-01", "spriteVariant": { "palette": "sea-green" } },
-  { "id": "sea-en-seal", "conceptId": "seal", "category": "sea-creatures", "lang": "en", "display": { "word": "seal" }, "typing": { "targetText": "seal" }, "difficulty": 1, "spriteId": "seal-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-en-coral", "conceptId": "coral", "category": "sea-creatures", "lang": "en", "display": { "word": "coral" }, "typing": { "targetText": "coral" }, "difficulty": 1, "spriteId": "coral-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-en-wave", "conceptId": "wave", "category": "sea-creatures", "lang": "en", "display": { "word": "wave" }, "typing": { "targetText": "wave" }, "difficulty": 1, "spriteId": "wave-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-en-anchor", "conceptId": "anchor", "category": "sea-creatures", "lang": "en", "display": { "word": "anchor" }, "typing": { "targetText": "anchor" }, "difficulty": 2, "spriteId": "anchor-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-en-boat", "conceptId": "boat", "category": "sea-creatures", "lang": "en", "display": { "word": "boat" }, "typing": { "targetText": "boat" }, "difficulty": 1, "spriteId": "boat-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-en-oyster", "conceptId": "oyster", "category": "sea-creatures", "lang": "en", "display": { "word": "oyster" }, "typing": { "targetText": "oyster" }, "difficulty": 2, "spriteId": "oyster-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-en-penguin", "conceptId": "penguin", "category": "sea-creatures", "lang": "en", "display": { "word": "penguin" }, "typing": { "targetText": "penguin" }, "difficulty": 2, "spriteId": "penguin-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-en-sea-otter", "conceptId": "sea-otter", "category": "sea-creatures", "lang": "en", "display": { "word": "otter" }, "typing": { "targetText": "otter" }, "difficulty": 1, "spriteId": "otter-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-en-starfish", "conceptId": "starfish", "category": "sea-creatures", "lang": "en", "display": { "word": "starfish" }, "typing": { "targetText": "starfish" }, "difficulty": 2, "spriteId": "starfish-01", "spriteVariant": { "palette": "sea-yellow" } },
-  { "id": "sea-en-crocodile", "conceptId": "crocodile", "category": "sea-creatures", "lang": "en", "display": { "word": "crocodile" }, "typing": { "targetText": "crocodile" }, "difficulty": 2, "spriteId": "crocodile-01", "spriteVariant": { "palette": "sea-green" } },
-  { "id": "sea-en-swan", "conceptId": "swan", "category": "sea-creatures", "lang": "en", "display": { "word": "swan" }, "typing": { "targetText": "swan" }, "difficulty": 1, "spriteId": "swan-01", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-en-frog", "conceptId": "frog", "category": "sea-creatures", "lang": "en", "display": { "word": "frog" }, "typing": { "targetText": "frog" }, "difficulty": 1, "spriteId": "frog-01", "spriteVariant": { "palette": "sea-green" } },
-  { "id": "sea-en-snail", "conceptId": "snail", "category": "sea-creatures", "lang": "en", "display": { "word": "snail" }, "typing": { "targetText": "snail" }, "difficulty": 1, "spriteId": "snail-01", "spriteVariant": { "palette": "sea-orange" } },
-  { "id": "sea-en-jellyfish", "conceptId": "jellyfish", "category": "sea-creatures", "lang": "en", "display": { "word": "jellyfish" }, "typing": { "targetText": "jellyfish" }, "difficulty": 2, "spriteId": "jellyfish-01", "spriteVariant": { "palette": "sea-pink" } },
-  { "id": "sea-en-goldfish", "conceptId": "goldfish", "category": "sea-creatures", "lang": "en", "display": { "word": "goldfish" }, "typing": { "targetText": "goldfish" }, "difficulty": 2, "spriteId": "fish-tropical-01", "spriteVariant": { "palette": "sea-red" } },
-  { "id": "sea-en-tropical-fish", "conceptId": "tropical-fish", "category": "sea-creatures", "lang": "en", "display": { "word": "clownfish" }, "typing": { "targetText": "clownfish" }, "difficulty": 2, "spriteId": "fish-tropical-01", "spriteVariant": { "palette": "sea-yellow", "mirror": true } },
-  { "id": "sea-en-fish", "conceptId": "fish", "category": "sea-creatures", "lang": "en", "display": { "word": "fish" }, "typing": { "targetText": "fish" }, "difficulty": 1, "spriteId": "fish-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-en-blue-whale", "conceptId": "blue-whale", "category": "sea-creatures", "lang": "en", "display": { "word": "blue whale" }, "typing": { "targetText": "blue whale" }, "difficulty": 3, "spriteId": "whale-02", "spriteVariant": { "palette": "sea-mono" } },
-  { "id": "sea-en-shell", "conceptId": "shell", "category": "sea-creatures", "lang": "en", "display": { "word": "shell" }, "typing": { "targetText": "shell" }, "difficulty": 1, "spriteId": "shell-01", "spriteVariant": { "palette": "sea-yellow" } },
-  { "id": "sea-en-mackerel", "conceptId": "mackerel", "category": "sea-creatures", "lang": "en", "display": { "word": "mackerel" }, "typing": { "targetText": "mackerel" }, "difficulty": 2, "spriteId": "fish-01", "spriteVariant": { "palette": "sea-mono", "mirror": true } },
-  { "id": "sea-en-tuna", "conceptId": "tuna", "category": "sea-creatures", "lang": "en", "display": { "word": "tuna" }, "typing": { "targetText": "tuna" }, "difficulty": 1, "spriteId": "fish-01", "spriteVariant": { "palette": "sea-purple" } },
-  { "id": "sea-en-sea-bream", "conceptId": "sea-bream", "category": "sea-creatures", "lang": "en", "display": { "word": "seabream" }, "typing": { "targetText": "seabream" }, "difficulty": 2, "spriteId": "fish-tropical-01", "spriteVariant": { "palette": "sea-blue" } },
-  { "id": "sea-en-whale-shark", "conceptId": "whale-shark", "category": "sea-creatures", "lang": "en", "display": { "word": "whale shark" }, "typing": { "targetText": "whale shark" }, "difficulty": 3, "spriteId": "shark-01", "spriteVariant": { "palette": "sea-blue", "mirror": true } }
+  {
+    "id": "sea-en-octopus",
+    "conceptId": "octopus",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "octopus"
+    },
+    "typing": {
+      "targetText": "octopus"
+    },
+    "difficulty": 2,
+    "spriteId": "octopus-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-en-crab",
+    "conceptId": "crab",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "crab"
+    },
+    "typing": {
+      "targetText": "crab"
+    },
+    "difficulty": 1,
+    "spriteId": "crab-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-en-pufferfish",
+    "conceptId": "pufferfish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "pufferfish"
+    },
+    "typing": {
+      "targetText": "pufferfish"
+    },
+    "difficulty": 3,
+    "spriteId": "pufferfish-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-en-dolphin",
+    "conceptId": "dolphin",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "dolphin"
+    },
+    "typing": {
+      "targetText": "dolphin"
+    },
+    "difficulty": 2,
+    "spriteId": "dolphin-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-en-whale",
+    "conceptId": "whale",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "whale"
+    },
+    "typing": {
+      "targetText": "whale"
+    },
+    "difficulty": 2,
+    "spriteId": "whale-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-en-shark",
+    "conceptId": "shark",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "shark"
+    },
+    "typing": {
+      "targetText": "shark"
+    },
+    "difficulty": 2,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-shrimp",
+    "conceptId": "shrimp",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "shrimp"
+    },
+    "typing": {
+      "targetText": "shrimp"
+    },
+    "difficulty": 2,
+    "spriteId": "shrimp-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-en-spiny-lobster",
+    "conceptId": "spiny-lobster",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "lobster"
+    },
+    "typing": {
+      "targetText": "lobster"
+    },
+    "difficulty": 2,
+    "spriteId": "lobster-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "sea-en-squid",
+    "conceptId": "squid",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "squid"
+    },
+    "typing": {
+      "targetText": "squid"
+    },
+    "difficulty": 2,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-purple",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-turtle",
+    "conceptId": "turtle",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "turtle"
+    },
+    "typing": {
+      "targetText": "turtle"
+    },
+    "difficulty": 2,
+    "spriteId": "turtle-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-en-seal",
+    "conceptId": "seal",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "seal"
+    },
+    "typing": {
+      "targetText": "seal"
+    },
+    "difficulty": 1,
+    "spriteId": "seal-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-coral",
+    "conceptId": "coral",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "coral"
+    },
+    "typing": {
+      "targetText": "coral"
+    },
+    "difficulty": 2,
+    "spriteId": "coral-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-en-wave",
+    "conceptId": "wave",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "wave"
+    },
+    "typing": {
+      "targetText": "wave"
+    },
+    "difficulty": 1,
+    "spriteId": "wave-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-en-anchor",
+    "conceptId": "anchor",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "anchor"
+    },
+    "typing": {
+      "targetText": "anchor"
+    },
+    "difficulty": 2,
+    "spriteId": "anchor-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-boat",
+    "conceptId": "boat",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "boat"
+    },
+    "typing": {
+      "targetText": "boat"
+    },
+    "difficulty": 1,
+    "spriteId": "boat-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-en-oyster",
+    "conceptId": "oyster",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "oyster"
+    },
+    "typing": {
+      "targetText": "oyster"
+    },
+    "difficulty": 2,
+    "spriteId": "oyster-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-penguin",
+    "conceptId": "penguin",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "penguin"
+    },
+    "typing": {
+      "targetText": "penguin"
+    },
+    "difficulty": 2,
+    "spriteId": "penguin-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-sea-otter",
+    "conceptId": "sea-otter",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "otter"
+    },
+    "typing": {
+      "targetText": "otter"
+    },
+    "difficulty": 2,
+    "spriteId": "otter-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-en-starfish",
+    "conceptId": "starfish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "starfish"
+    },
+    "typing": {
+      "targetText": "starfish"
+    },
+    "difficulty": 2,
+    "spriteId": "starfish-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-en-crocodile",
+    "conceptId": "crocodile",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "crocodile"
+    },
+    "typing": {
+      "targetText": "crocodile"
+    },
+    "difficulty": 3,
+    "spriteId": "crocodile-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-en-swan",
+    "conceptId": "swan",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "swan"
+    },
+    "typing": {
+      "targetText": "swan"
+    },
+    "difficulty": 1,
+    "spriteId": "swan-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-frog",
+    "conceptId": "frog",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "frog"
+    },
+    "typing": {
+      "targetText": "frog"
+    },
+    "difficulty": 1,
+    "spriteId": "frog-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-en-snail",
+    "conceptId": "snail",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "snail"
+    },
+    "typing": {
+      "targetText": "snail"
+    },
+    "difficulty": 2,
+    "spriteId": "snail-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-en-jellyfish",
+    "conceptId": "jellyfish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "jellyfish"
+    },
+    "typing": {
+      "targetText": "jellyfish"
+    },
+    "difficulty": 3,
+    "spriteId": "jellyfish-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-en-goldfish",
+    "conceptId": "goldfish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "goldfish"
+    },
+    "typing": {
+      "targetText": "goldfish"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "sea-en-tropical-fish",
+    "conceptId": "tropical-fish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "clownfish"
+    },
+    "typing": {
+      "targetText": "clownfish"
+    },
+    "difficulty": 3,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-yellow",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-fish",
+    "conceptId": "fish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "fish"
+    },
+    "typing": {
+      "targetText": "fish"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-en-blue-whale",
+    "conceptId": "blue-whale",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "blue whale"
+    },
+    "typing": {
+      "targetText": "blue whale"
+    },
+    "difficulty": 3,
+    "spriteId": "whale-02",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-shell",
+    "conceptId": "shell",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "shell"
+    },
+    "typing": {
+      "targetText": "shell"
+    },
+    "difficulty": 2,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-en-mackerel",
+    "conceptId": "mackerel",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "mackerel"
+    },
+    "typing": {
+      "targetText": "mackerel"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-mono",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-tuna",
+    "conceptId": "tuna",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "tuna"
+    },
+    "typing": {
+      "targetText": "tuna"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-en-sea-bream",
+    "conceptId": "sea-bream",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "seabream"
+    },
+    "typing": {
+      "targetText": "seabream"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-en-whale-shark",
+    "conceptId": "whale-shark",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "whale shark"
+    },
+    "typing": {
+      "targetText": "whale shark"
+    },
+    "difficulty": 3,
+    "spriteId": "shark-01",
+    "spriteVariant": {
+      "palette": "sea-blue",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-horse-mackerel",
+    "conceptId": "horse-mackerel",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "horse mackerel"
+    },
+    "typing": {
+      "targetText": "horse mackerel"
+    },
+    "difficulty": 3,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-en-sardine",
+    "conceptId": "sardine",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "sardine"
+    },
+    "typing": {
+      "targetText": "sardine"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-teal",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-bonito",
+    "conceptId": "bonito",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "bonito"
+    },
+    "typing": {
+      "targetText": "bonito"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-red",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-yellowtail",
+    "conceptId": "yellowtail",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "yellowtail"
+    },
+    "typing": {
+      "targetText": "yellowtail"
+    },
+    "difficulty": 3,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-en-saury",
+    "conceptId": "saury",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "saury"
+    },
+    "typing": {
+      "targetText": "saury"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-en-flounder",
+    "conceptId": "flounder",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "flounder"
+    },
+    "typing": {
+      "targetText": "flounder"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-green",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-flatfish",
+    "conceptId": "flatfish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "flatfish"
+    },
+    "typing": {
+      "targetText": "flatfish"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-conger-eel",
+    "conceptId": "conger-eel",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "conger eel"
+    },
+    "typing": {
+      "targetText": "conger eel"
+    },
+    "difficulty": 3,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-en-eel",
+    "conceptId": "eel",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "eel"
+    },
+    "typing": {
+      "targetText": "eel"
+    },
+    "difficulty": 1,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-carp",
+    "conceptId": "carp",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "carp"
+    },
+    "typing": {
+      "targetText": "carp"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-en-loach",
+    "conceptId": "loach",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "loach"
+    },
+    "typing": {
+      "targetText": "loach"
+    },
+    "difficulty": 2,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "sea-en-young-yellowtail",
+    "conceptId": "young-yellowtail",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "hamachi"
+    },
+    "typing": {
+      "targetText": "hamachi"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-en-cod",
+    "conceptId": "cod",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "cod"
+    },
+    "typing": {
+      "targetText": "cod"
+    },
+    "difficulty": 1,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-purple",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-salmon",
+    "conceptId": "salmon",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "salmon"
+    },
+    "typing": {
+      "targetText": "salmon"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-pink",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-herring",
+    "conceptId": "herring",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "herring"
+    },
+    "typing": {
+      "targetText": "herring"
+    },
+    "difficulty": 2,
+    "spriteId": "fish-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-en-killifish",
+    "conceptId": "killifish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "killifish"
+    },
+    "typing": {
+      "targetText": "killifish"
+    },
+    "difficulty": 3,
+    "spriteId": "fish-tropical-01",
+    "spriteVariant": {
+      "palette": "sea-teal",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-king-crab",
+    "conceptId": "king-crab",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "king crab"
+    },
+    "typing": {
+      "targetText": "king crab"
+    },
+    "difficulty": 3,
+    "spriteId": "crab-01",
+    "spriteVariant": {
+      "palette": "sea-red"
+    }
+  },
+  {
+    "id": "sea-en-snow-crab",
+    "conceptId": "snow-crab",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "snow crab"
+    },
+    "typing": {
+      "targetText": "snow crab"
+    },
+    "difficulty": 3,
+    "spriteId": "crab-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-mantis-shrimp",
+    "conceptId": "mantis-shrimp",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "mantis shrimp"
+    },
+    "typing": {
+      "targetText": "mantis shrimp"
+    },
+    "difficulty": 3,
+    "spriteId": "shrimp-01",
+    "spriteVariant": {
+      "palette": "sea-orange"
+    }
+  },
+  {
+    "id": "sea-en-short-neck-clam",
+    "conceptId": "short-neck-clam",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "clam"
+    },
+    "typing": {
+      "targetText": "clam"
+    },
+    "difficulty": 1,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-hard-clam",
+    "conceptId": "hard-clam",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "hard clam"
+    },
+    "typing": {
+      "targetText": "hard clam"
+    },
+    "difficulty": 3,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-en-freshwater-clam",
+    "conceptId": "freshwater-clam",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "shijimi clam"
+    },
+    "typing": {
+      "targetText": "shijimi clam"
+    },
+    "difficulty": 3,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-en-scallop",
+    "conceptId": "scallop",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "scallop"
+    },
+    "typing": {
+      "targetText": "scallop"
+    },
+    "difficulty": 2,
+    "spriteId": "oyster-01",
+    "spriteVariant": {
+      "palette": "sea-yellow"
+    }
+  },
+  {
+    "id": "sea-en-moon-jellyfish",
+    "conceptId": "moon-jellyfish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "moon jellyfish"
+    },
+    "typing": {
+      "targetText": "moon jellyfish"
+    },
+    "difficulty": 3,
+    "spriteId": "jellyfish-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-red-jellyfish",
+    "conceptId": "red-jellyfish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "red jellyfish"
+    },
+    "typing": {
+      "targetText": "red jellyfish"
+    },
+    "difficulty": 3,
+    "spriteId": "jellyfish-01",
+    "spriteVariant": {
+      "palette": "sea-red",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-sperm-whale",
+    "conceptId": "sperm-whale",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "sperm whale"
+    },
+    "typing": {
+      "targetText": "sperm whale"
+    },
+    "difficulty": 3,
+    "spriteId": "whale-01",
+    "spriteVariant": {
+      "palette": "sea-purple"
+    }
+  },
+  {
+    "id": "sea-en-orca",
+    "conceptId": "orca",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "orca"
+    },
+    "typing": {
+      "targetText": "orca"
+    },
+    "difficulty": 1,
+    "spriteId": "dolphin-01",
+    "spriteVariant": {
+      "palette": "sea-mono"
+    }
+  },
+  {
+    "id": "sea-en-narwhal",
+    "conceptId": "narwhal",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "narwhal"
+    },
+    "typing": {
+      "targetText": "narwhal"
+    },
+    "difficulty": 2,
+    "spriteId": "whale-02",
+    "spriteVariant": {
+      "palette": "sea-blue"
+    }
+  },
+  {
+    "id": "sea-en-giant-octopus",
+    "conceptId": "giant-octopus",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "giant octopus"
+    },
+    "typing": {
+      "targetText": "giant octopus"
+    },
+    "difficulty": 3,
+    "spriteId": "octopus-01",
+    "spriteVariant": {
+      "palette": "sea-blue",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-cuttlefish",
+    "conceptId": "cuttlefish",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "cuttlefish"
+    },
+    "typing": {
+      "targetText": "cuttlefish"
+    },
+    "difficulty": 3,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-yellow",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-spear-squid",
+    "conceptId": "spear-squid",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "spear squid"
+    },
+    "typing": {
+      "targetText": "spear squid"
+    },
+    "difficulty": 3,
+    "spriteId": "squid-01",
+    "spriteVariant": {
+      "palette": "sea-green"
+    }
+  },
+  {
+    "id": "sea-en-surf-clam",
+    "conceptId": "surf-clam",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "surf clam"
+    },
+    "typing": {
+      "targetText": "surf clam"
+    },
+    "difficulty": 3,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  },
+  {
+    "id": "sea-en-abalone",
+    "conceptId": "abalone",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "abalone"
+    },
+    "typing": {
+      "targetText": "abalone"
+    },
+    "difficulty": 2,
+    "spriteId": "shell-01",
+    "spriteVariant": {
+      "palette": "sea-orange",
+      "mirror": true
+    }
+  },
+  {
+    "id": "sea-en-duck",
+    "conceptId": "duck",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "duck"
+    },
+    "typing": {
+      "targetText": "duck"
+    },
+    "difficulty": 1,
+    "spriteId": "duck-01",
+    "spriteVariant": {
+      "palette": "sea-teal"
+    }
+  },
+  {
+    "id": "sea-en-mermaid",
+    "conceptId": "mermaid",
+    "category": "sea-creatures",
+    "lang": "en",
+    "display": {
+      "word": "mermaid"
+    },
+    "typing": {
+      "targetText": "mermaid"
+    },
+    "difficulty": 2,
+    "spriteId": "mermaid-01",
+    "spriteVariant": {
+      "palette": "sea-pink"
+    }
+  }
 ]
