@@ -4,7 +4,7 @@
    外部オリジン（Google Fonts）は Network-First → Cache フォールバック。
    ═══════════════════════════════════════ */
 
-const CACHE_NAME = 'tsunagi-typing-v6';
+const CACHE_NAME = 'tsunagi-typing-v7';
 
 const STATIC_ASSETS = [
   './',
@@ -57,6 +57,7 @@ const STATIC_ASSETS = [
   './js/game/word-queue.js',
 
   './js/profile/profile-store.js',
+  './js/profile/ranks.js',
 
   './js/ui/keyboard-overlay.js',
   './js/ui/sprite-thumbnail.js',
