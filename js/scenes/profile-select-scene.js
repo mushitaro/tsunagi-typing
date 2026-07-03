@@ -1,4 +1,5 @@
-import { loadProfiles, setActiveProfile, deleteProfile } from '../profile/profile-store.js';
+import { loadProfiles, setActiveProfile, deleteProfile, getProfileTotalScore } from '../profile/profile-store.js';
+import { getRankForScore } from '../profile/ranks.js';
 import { drawSpriteThumbnail, avatarVariant } from '../ui/sprite-thumbnail.js';
 
 export const profileSelectScene = {
@@ -37,10 +38,17 @@ export const profileSelectScene = {
       nameEl.textContent = profile.name;
       card.appendChild(nameEl);
 
-      const best = Math.max(0, ...Object.values(profile.stats ?? {}).map((s) => s.bestScore ?? 0));
+      // 積算スコアから今の称号を出して、なまえの下に見せる。
+      const totalScore = getProfileTotalScore(profile);
+      const rank = getRankForScore(totalScore);
+      const titleEl = document.createElement('div');
+      titleEl.className = 'profile-card-title';
+      titleEl.textContent = `${rank.emoji} ${rank.title}`;
+      card.appendChild(titleEl);
+
       const bestEl = document.createElement('div');
       bestEl.className = 'profile-card-best';
-      bestEl.textContent = `best ${best}`;
+      bestEl.textContent = `つうさん ${totalScore}`;
       card.appendChild(bestEl);
 
       card.addEventListener('click', () => {

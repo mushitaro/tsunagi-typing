@@ -1,4 +1,5 @@
-import { getActiveProfile, setActiveProfile } from '../profile/profile-store.js';
+import { getActiveProfile, setActiveProfile, getProfileTotalScore } from '../profile/profile-store.js';
+import { getRankForScore } from '../profile/ranks.js';
 import { drawSpriteThumbnail, CATEGORY_ICONS } from '../ui/sprite-thumbnail.js';
 
 export const modeSelectScene = {
@@ -20,6 +21,9 @@ export const modeSelectScene = {
     this.categoryGrid = document.getElementById('category-grid');
     this.startBtn = document.getElementById('start-round-btn');
     this.backBtn = document.getElementById('back-to-profiles-btn');
+    this.titleBadge = document.getElementById('mode-title-badge');
+
+    this.renderTitleBadge();
 
     this._onLangClick = (e) => {
       const btn = e.target.closest('.lang-btn');
@@ -56,6 +60,36 @@ export const modeSelectScene = {
     this.langToggle.querySelectorAll('.lang-btn').forEach((btn) => {
       btn.classList.toggle('is-selected', btn.dataset.lang === this.language);
     });
+  },
+
+  /** アクティブなプロフィールの称号（積算スコアから算出）をヘッダー下に表示する。 */
+  renderTitleBadge() {
+    if (!this.titleBadge) return;
+    if (!this.profile) {
+      this.titleBadge.hidden = true;
+      this.titleBadge.textContent = '';
+      return;
+    }
+
+    const totalScore = getProfileTotalScore(this.profile);
+    const rank = getRankForScore(totalScore);
+    this.titleBadge.hidden = false;
+    this.titleBadge.innerHTML = '';
+
+    const nameEl = document.createElement('span');
+    nameEl.className = 'profile-title-badge-name';
+    nameEl.textContent = this.profile.name;
+    this.titleBadge.appendChild(nameEl);
+
+    const rankEl = document.createElement('span');
+    rankEl.className = 'profile-title-badge-rank';
+    rankEl.textContent = `${rank.emoji} ${rank.title}`;
+    this.titleBadge.appendChild(rankEl);
+
+    const scoreEl = document.createElement('span');
+    scoreEl.className = 'profile-title-badge-score';
+    scoreEl.textContent = `つうさん ${totalScore}`;
+    this.titleBadge.appendChild(scoreEl);
   },
 
   buildCategoryGrid() {

@@ -157,8 +157,48 @@
   color: var(--color-ink);
 }
 
+.profile-card-title {
+  font-size: 0.72rem;
+  line-height: 1.3;
+  color: var(--color-laser);
+  text-align: center;
+}
+
 .profile-card-best {
   font-size: 0.75rem;
+  color: var(--color-faint);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── 称号バッジ（モード選択のヘッダー下） ─────────── */
+.profile-title-badge {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-line);
+  background: var(--color-surface);
+  font-family: var(--font-sans);
+}
+
+.profile-title-badge[hidden] {
+  display: none;
+}
+
+.profile-title-badge-name {
+  font-size: 0.95rem;
+  color: var(--color-ink);
+}
+
+.profile-title-badge-rank {
+  font-size: 0.95rem;
+  color: var(--color-laser);
+}
+
+.profile-title-badge-score {
+  font-size: 0.8rem;
   color: var(--color-faint);
   font-variant-numeric: tabular-nums;
 }
@@ -375,6 +415,120 @@
   font-family: var(--font-pixel);
   font-size: 1.8rem;
   color: var(--color-ink);
+}
+
+/* ── 結果画面：称号・積算スコア ─────────────────── */
+.results-rank {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+}
+
+.results-rank.is-up {
+  border-color: var(--color-explosion);
+}
+
+.results-rank-emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.results-rank-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.results-rank-label {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--color-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.results-rank-title {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  color: var(--color-ink);
+}
+
+.results-total {
+  color: var(--color-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+/* 次の称号までの進捗バー */
+.rank-progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+  max-width: 280px;
+}
+
+.rank-progress-bar {
+  height: 10px;
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-surface);
+  overflow: hidden;
+}
+
+.rank-progress-fill {
+  height: 100%;
+  background: var(--color-laser);
+  transition: width 0.4s ease;
+}
+
+.rank-progress-label {
+  font-size: 0.75rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+/* ランクアップの祝福バナー */
+.rank-up-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-5);
+  border: 1px solid var(--color-explosion);
+  background: var(--color-surface-raised);
+  animation: rank-up-pop 0.5s ease;
+}
+
+.rank-up-title {
+  font-family: var(--font-pixel);
+  font-size: 0.95rem;
+  color: var(--color-explosion-hot);
+}
+
+.rank-up-label {
+  font-size: 0.75rem;
+  color: var(--color-ink-soft);
+}
+
+.rank-up-name {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  color: var(--color-ink);
+}
+
+@keyframes rank-up-pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rank-up-banner { animation: none; }
+  .rank-progress-fill { transition: none; }
 }
 
 @media (max-width: 480px) {
