@@ -21,6 +21,7 @@
  *   wrongKey: () => void,
  *   uiClick: () => void,
  *   wordStart: () => void,
+ *   fanfare: () => void,
  *   resumeContext: () => void,
  * }}
  */
@@ -248,6 +249,33 @@ export function createSfx() {
     });
   }
 
+  /**
+   * fanfare() -- 称号ランクアップ時の、明るい「テッテッテッテー♪」というごほうび音。
+   * ドミソド（Cメジャー・アルペジオ）を少しずつ遅らせて鳴らす、チップチューン風のファンファーレ。
+   * 外部音源に頼らず playTone を時間差で重ねるだけなので、他の効果音と同じく合成のみで完結する。
+   */
+  function fanfare() {
+    const audioCtx = getContext();
+    if (!audioCtx) return;
+
+    // ド(C5) ミ(E5) ソ(G5) ド(C6) の順に上がっていく、勝ちどきのアルペジオ。
+    const notes = [523.25, 659.25, 783.99, 1046.5];
+    const stepMs = 110;
+    notes.forEach((freq, i) => {
+      const isLast = i === notes.length - 1;
+      setTimeout(() => {
+        playTone({
+          type: 'square',
+          startFreq: freq,
+          endFreq: freq,
+          duration: isLast ? 0.4 : 0.14,
+          peak: isLast ? 0.2 : 0.16,
+          attack: 0.004,
+        });
+      }, i * stepMs);
+    });
+  }
+
   return {
     laser,
     hit,
@@ -255,6 +283,7 @@ export function createSfx() {
     wrongKey,
     uiClick,
     wordStart,
+    fanfare,
     resumeContext,
   };
 }

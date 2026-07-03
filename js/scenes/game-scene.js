@@ -285,8 +285,9 @@ export const gameScene = {
   finishRound() {
     const score = this.scoreTracker.getScore();
     const wordsCleared = this.scoreTracker.getWordsCleared();
+    let progression = null;
     if (this.profileId) {
-      recordRoundResult(this.profileId, this.categoryId, { score, wordsCleared });
+      progression = recordRoundResult(this.profileId, this.categoryId, { score, wordsCleared });
     }
     this.appCtx.sceneManager.goto('results', {
       profileId: this.profileId,
@@ -294,6 +295,7 @@ export const gameScene = {
       language: this.language,
       score,
       wordsCleared,
+      progression,
     });
   },
 
