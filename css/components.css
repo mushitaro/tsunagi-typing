@@ -203,6 +203,22 @@
   font-variant-numeric: tabular-nums;
 }
 
+.profile-title-badge.is-tappable {
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease;
+}
+
+.profile-title-badge.is-tappable:hover,
+.profile-title-badge.is-tappable:focus-visible {
+  border-color: var(--color-line-strong);
+  background: var(--color-surface-raised);
+}
+
+.profile-title-badge-hint {
+  font-size: 0.78rem;
+  color: var(--color-laser);
+}
+
 .name-input {
   width: 100%;
   max-width: 320px;
@@ -526,9 +542,147 @@
   100% { transform: scale(1); opacity: 1; }
 }
 
+/* ── 称号いちらん ポップアップ ───────────────────── */
+.rank-popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: rgba(10, 10, 10, 0.78);
+}
+
+.rank-popup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 380px;
+  max-height: 82vh;
+  padding: var(--space-5);
+  background: var(--color-surface-raised);
+  border: 1px solid var(--color-line-strong);
+  animation: rank-popup-in 0.18s ease;
+}
+
+.rank-popup-title {
+  margin: 0;
+  text-align: center;
+  font-family: var(--font-pixel);
+  font-size: 1rem;
+  color: var(--color-ink);
+}
+
+.rank-popup-sub {
+  margin: 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.rank-popup-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.rank-popup-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid transparent;
+  background: var(--color-surface);
+  color: var(--color-faint);
+}
+
+.rank-popup-row.is-reached {
+  color: var(--color-ink);
+}
+
+.rank-popup-row.is-current {
+  border-color: var(--color-laser);
+  background: var(--color-surface-raised);
+}
+
+.rank-popup-lv {
+  font-family: var(--font-pixel);
+  font-size: 0.6rem;
+  color: var(--color-muted);
+  min-width: 2.8em;
+}
+
+.rank-popup-emoji {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.rank-popup-name {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.rank-popup-score {
+  font-size: 0.75rem;
+  color: var(--color-faint);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.rank-popup-row.is-current .rank-popup-score {
+  color: var(--color-laser);
+}
+
+.rank-popup-close {
+  align-self: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-ink);
+  color: var(--color-paper);
+  cursor: pointer;
+}
+
+.rank-popup-close:hover,
+.rank-popup-close:focus-visible {
+  transform: translateY(-1px);
+}
+
+@keyframes rank-popup-in {
+  from { transform: scale(0.94); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* 結果画面：称号いちらんを開くボタン */
+.rank-list-btn {
+  margin-top: var(--space-2);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid var(--color-line-strong);
+  background: transparent;
+  color: var(--color-ink-soft);
+  cursor: pointer;
+}
+
+.rank-list-btn:hover,
+.rank-list-btn:focus-visible {
+  color: var(--color-ink);
+  border-color: var(--color-laser);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .rank-up-banner { animation: none; }
   .rank-progress-fill { transition: none; }
+  .rank-popup { animation: none; }
 }
 
 @media (max-width: 480px) {

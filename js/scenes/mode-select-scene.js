@@ -1,5 +1,6 @@
 import { getActiveProfile, setActiveProfile, getProfileTotalScore } from '../profile/profile-store.js';
 import { getRankForScore } from '../profile/ranks.js';
+import { showRankListPopup, closeRankListPopup } from '../ui/rank-list-popup.js';
 import { drawSpriteThumbnail, CATEGORY_ICONS } from '../ui/sprite-thumbnail.js';
 
 export const modeSelectScene = {
@@ -90,6 +91,28 @@ export const modeSelectScene = {
     scoreEl.className = 'profile-title-badge-score';
     scoreEl.textContent = `つうさん ${totalScore}`;
     this.titleBadge.appendChild(scoreEl);
+
+    const hintEl = document.createElement('span');
+    hintEl.className = 'profile-title-badge-hint';
+    hintEl.textContent = 'いちらん ▸';
+    this.titleBadge.appendChild(hintEl);
+
+    // バッジをタップすると全称号の一覧ポップアップを開く。
+    this.titleBadge.classList.add('is-tappable');
+    this.titleBadge.setAttribute('role', 'button');
+    this.titleBadge.setAttribute('tabindex', '0');
+    this._onBadge = () => {
+      this.appCtx.sfx.uiClick();
+      showRankListPopup(getProfileTotalScore(this.profile));
+    };
+    this._onBadgeKey = (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        this._onBadge();
+      }
+    };
+    this.titleBadge.addEventListener('click', this._onBadge);
+    this.titleBadge.addEventListener('keydown', this._onBadgeKey);
   },
 
   buildCategoryGrid() {
@@ -127,8 +150,13 @@ export const modeSelectScene = {
   },
 
   unmount() {
+    closeRankListPopup();
     this.langToggle?.removeEventListener('click', this._onLangClick);
     this.backBtn?.removeEventListener('click', this._onBack);
     this.startBtn?.removeEventListener('click', this._onStart);
+    if (this.titleBadge) {
+      this.titleBadge.removeEventListener('click', this._onBadge);
+      this.titleBadge.removeEventListener('keydown', this._onBadgeKey);
+    }
   },
 };

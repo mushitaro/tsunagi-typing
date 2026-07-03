@@ -1,5 +1,6 @@
 import { getActiveProfile, getProfileTotalScore } from '../profile/profile-store.js';
 import { getRankForScore, getRankProgress } from '../profile/ranks.js';
+import { showRankListPopup, closeRankListPopup } from '../ui/rank-list-popup.js';
 
 export const resultsScene = {
   id: 'results',
@@ -115,6 +116,18 @@ export const resultsScene = {
 
     this.summaryEl.appendChild(progressWrap);
 
+    // 全称号を一覧できるボタン（タップでポップアップ）。
+    const listBtn = document.createElement('button');
+    listBtn.type = 'button';
+    listBtn.className = 'rank-list-btn';
+    listBtn.textContent = '📖 しょうごう いちらん';
+    this._onRankList = () => {
+      this.appCtx.sfx.uiClick();
+      showRankListPopup(totalScore);
+    };
+    listBtn.addEventListener('click', this._onRankList);
+    this.summaryEl.appendChild(listBtn);
+
     // ランクアップ時はごほうびのファンファーレを鳴らす。
     if (rankedUp) {
       this.appCtx.sfx.fanfare();
@@ -138,6 +151,7 @@ export const resultsScene = {
   },
 
   unmount() {
+    closeRankListPopup();
     this.replayBtn?.removeEventListener('click', this._onReplay);
     this.menuBtn?.removeEventListener('click', this._onMenu);
   },
