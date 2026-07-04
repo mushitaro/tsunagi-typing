@@ -33,6 +33,8 @@ export function createSceneManager(ctx) {
 
     current = next;
     sectionFor(id)?.classList.add('scene--active');
+    // 現在のシーンを body に反映（フッター等の全体UIをシーン別に出し分けるため）。
+    document.body.dataset.scene = id;
     ctx.eventBus.emit('scene:enter', { id });
     await current.mount?.(ctx, params);
   }

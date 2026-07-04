@@ -55,6 +55,30 @@
   outline-offset: 2px;
 }
 
+/* シェアボタン（結果画面）。アクセントカラーで少し目立たせる。 */
+.share-btn {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-weight: 700;
+  padding: var(--space-3) var(--space-6);
+  border: 1px solid var(--color-laser);
+  background: transparent;
+  color: var(--color-laser);
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+
+.share-btn:hover,
+.share-btn:focus-visible {
+  transform: translateY(-1px);
+  background: var(--color-surface-raised);
+}
+
+.share-btn:active {
+  transform: translateY(1px) scale(0.98);
+}
+
 .button-row {
   display: flex;
   gap: var(--space-3);
@@ -706,6 +730,42 @@
   .rank-up-banner { animation: none; }
   .rank-progress-fill { transition: none; }
   .rank-popup { animation: none; }
+}
+
+/* ── フッター（ブランド表記） ─────────────────── */
+.app-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  padding: var(--space-2);
+  pointer-events: none; /* 背後のシーン操作を邪魔しない。リンクだけ有効化する。 */
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  color: var(--color-faint);
+}
+
+.app-footer a {
+  pointer-events: auto;
+  color: var(--color-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.app-footer a:hover,
+.app-footer a:focus-visible {
+  color: var(--color-ink-soft);
+  border-bottom-color: var(--color-line-strong);
+}
+
+/* ゲーム中はキーボード等と重なるのでフッターは隠す。 */
+body[data-scene="game"] .app-footer {
+  display: none;
 }
 
 @media (max-width: 480px) {

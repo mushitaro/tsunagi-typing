@@ -12,6 +12,9 @@ export const resultsScene = {
     this.summaryEl = document.getElementById('results-summary');
     this.replayBtn = document.getElementById('replay-btn');
     this.menuBtn = document.getElementById('menu-btn');
+    this.shareBtn = document.getElementById('share-btn');
+    this._shareDefaultLabel = '📣 シェア';
+    if (this.shareBtn) this.shareBtn.textContent = this._shareDefaultLabel;
 
     const profile = getActiveProfile();
     const best = profile?.stats?.[params.categoryId]?.bestScore ?? 0;
@@ -148,13 +151,49 @@ export const resultsScene = {
       this.appCtx.sceneManager.goto('mode-select', { profileId: this.params.profileId });
     };
 
+    // ── シェア（Web Share API、無い環境ではクリップボードにコピー） ──
+    const shareTitle = 'タイピング・インベーダー';
+    const shareText =
+      `${shareTitle}${categoryLabel ? '｜' + categoryLabel : ''}\n` +
+      `SCORE ${params.score ?? 0}・しょうごう ${rank.emoji}${rank.title}`;
+    const shareUrl = `${location.origin}${location.pathname}`;
+
+    this._onShare = async () => {
+      this.appCtx.sfx.uiClick();
+      try {
+        if (navigator.share) {
+          await navigator.share({ title: shareTitle, text: shareText, url: shareUrl });
+        } else if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(`${shareText}\n${shareUrl}`);
+          this.flashShareLabel('コピーしました！');
+        } else {
+          this.flashShareLabel('コピーできません');
+        }
+      } catch (err) {
+        // ユーザーがシェアをキャンセルした場合 (AbortError) などは静かに無視する。
+      }
+    };
+
     this.replayBtn.addEventListener('click', this._onReplay);
     this.menuBtn.addEventListener('click', this._onMenu);
+    this.shareBtn?.addEventListener('click', this._onShare);
+  },
+
+  /** シェアボタンのラベルを一時的に切り替えてフィードバックする（クリップボードコピー時など）。 */
+  flashShareLabel(message) {
+    if (!this.shareBtn) return;
+    this.shareBtn.textContent = message;
+    clearTimeout(this._shareLabelTimer);
+    this._shareLabelTimer = setTimeout(() => {
+      if (this.shareBtn) this.shareBtn.textContent = this._shareDefaultLabel;
+    }, 1600);
   },
 
   unmount() {
     closeRankListPopup();
+    clearTimeout(this._shareLabelTimer);
     this.replayBtn?.removeEventListener('click', this._onReplay);
     this.menuBtn?.removeEventListener('click', this._onMenu);
+    this.shareBtn?.removeEventListener('click', this._onShare);
   },
 };
