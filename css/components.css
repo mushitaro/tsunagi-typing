@@ -102,10 +102,20 @@
 .profile-grid,
 .avatar-grid,
 .category-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-3);
   width: 100%;
+}
+
+.profile-card,
+.category-card {
+  width: 160px;
+}
+
+.avatar-cell {
+  width: 96px;
 }
 
 .profile-card,
@@ -157,11 +167,17 @@
   color: var(--color-ink);
 }
 
-.profile-card-title {
-  font-size: 0.72rem;
+.category-card-title {
+  font-size: 0.78rem;
   line-height: 1.3;
   color: var(--color-laser);
   text-align: center;
+}
+
+.category-card-score {
+  font-size: 0.7rem;
+  color: var(--color-faint);
+  font-variant-numeric: tabular-nums;
 }
 
 .profile-card-best {

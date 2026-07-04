@@ -289,9 +289,12 @@ export const gameScene = {
     if (this.profileId) {
       progression = recordRoundResult(this.profileId, this.categoryId, { score, wordsCleared });
     }
+    const category = this.wordData?.categories?.find((c) => c.id === this.categoryId);
+    const categoryLabel = category ? (this.language === 'ja' ? category.labelJa : category.labelEn) : this.categoryId;
     this.appCtx.sceneManager.goto('results', {
       profileId: this.profileId,
       categoryId: this.categoryId,
+      categoryLabel,
       language: this.language,
       score,
       wordsCleared,

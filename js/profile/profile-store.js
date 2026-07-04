@@ -11,10 +11,9 @@
  *       name: "ゆうと",
  *       avatarId: "crab-01",
  *       createdAt: "2026-07-01T00:00:00.000Z",
- *       totalScore: 12500,   // 全お題ぶんの積算スコア（称号/ランクの判定に使う）
  *       stats: {
- *         "sea-creatures": { bestScore, wordsCleared, roundsPlayed },
- *         "math": { bestScore, wordsCleared, roundsPlayed },
+ *         "sea-creatures": { bestScore, wordsCleared, roundsPlayed, totalScore },
+ *         "math":          { bestScore, wordsCleared, roundsPlayed, totalScore },
  *       },
  *       lastLanguage: "ja",
  *     },
@@ -22,10 +21,12 @@
  *   activeProfileId: "profile-xxxxxxxx",
  * }
  *
- * totalScore は各ラウンドで得たスコアを（お題をまたいで）ユーザーごとに足し込んだ
- * 積算スコア。stats[].bestScore が「そのお題の自己ベスト（最大値）」なのに対し、
- * totalScore は「これまでの全プレイの合計」で、称号（ranks.js）の判定に使う。
- * 旧データに totalScore が無い場合は 0 とみなす。
+ * 称号（ranks.js）は「お題ごと」に決まる。各ラウンドのスコアはそのお題の
+ * stats[categoryId].totalScore に積算され、その積算スコアで称号が上がっていく。
+ * stats[].bestScore は「そのお題の自己ベスト（最大値）」、totalScore は
+ * 「そのお題のこれまでの合計」。プロフィール一覧の「ごうけい」は全お題の
+ * totalScore の総和（getProfileTotalScore）。旧データに totalScore が無い場合は
+ * 0 とみなす（＝称号はそのお題を遊び直すと貯まり始める）。
  *
  * localStorage が使えない環境 (プライベートブラウジング等で例外を投げる場合) でも
  * ゲーム全体がクラッシュしないよう、すべての読み書きは try/catch で例外を握りつぶし、
@@ -43,7 +44,7 @@ function createEmptyState() {
 }
 
 function createEmptyStats() {
-  return { bestScore: 0, wordsCleared: 0, roundsPlayed: 0 };
+  return { bestScore: 0, wordsCleared: 0, roundsPlayed: 0, totalScore: 0 };
 }
 
 function generateProfileId() {
@@ -112,7 +113,6 @@ export function createProfile(name, avatarId) {
     name: finalName,
     avatarId: avatarId ?? null,
     createdAt: new Date().toISOString(),
-    totalScore: 0,
     stats,
     lastLanguage: 'ja',
   };
@@ -168,17 +168,19 @@ export function getActiveProfile() {
  * ラウンドの結果をプロフィールの統計に記録する。
  * categoryId が未知のカテゴリでも自動的に stats エントリを作成する。
  *
- * このラウンドのスコアは profile.totalScore（積算スコア）にも足し込まれ、
- * 積算スコアに応じた称号（ranks.js）が上がったかどうかを戻り値で返す。
+ * このラウンドのスコアは、そのお題（カテゴリ）の積算スコア
+ * stats[categoryId].totalScore に足し込まれる。称号（ranks.js）は
+ * 「お題ごと」の積算スコアで決まるので、上がったかどうかもお題単位で返す。
  * profileId が見つからない場合は null を返す。
  *
  * @param {string} profileId
  * @param {string} categoryId
  * @param {{ score: number, wordsCleared: number, accuracy?: number }} result
  * @returns {{
- *   totalScore: number,
+ *   categoryId: string,
+ *   categoryTotalScore: number,   // このお題の積算スコア（加算後）
+ *   previousCategoryTotal: number,
  *   gained: number,
- *   previousTotal: number,
  *   previousRank: { level: number, title: string, emoji: string, minScore: number },
  *   rank: { level: number, title: string, emoji: string, minScore: number },
  *   rankedUp: boolean,
@@ -205,21 +207,22 @@ export function recordRoundResult(profileId, categoryId, { score = 0, wordsClear
   // accuracy は現状 stats 構造に保存フィールドが無いため受け取るだけで無視する（将来の拡張用）。
   void accuracy;
 
-  // 積算スコアを更新し、称号が上がったかを判定する。
+  // このお題の積算スコアを更新し、称号（お題ごと）が上がったかを判定する。
   const gained = Number.isFinite(score) && score > 0 ? score : 0;
-  const previousTotal = Number.isFinite(profile.totalScore) ? profile.totalScore : 0;
-  const totalScore = previousTotal + gained;
-  profile.totalScore = totalScore;
+  const previousCategoryTotal = Number.isFinite(categoryStats.totalScore) ? categoryStats.totalScore : 0;
+  const categoryTotalScore = previousCategoryTotal + gained;
+  categoryStats.totalScore = categoryTotalScore;
 
-  const previousRank = getRankForScore(previousTotal);
-  const rank = getRankForScore(totalScore);
+  const previousRank = getRankForScore(previousCategoryTotal);
+  const rank = getRankForScore(categoryTotalScore);
 
   saveProfiles(state);
 
   return {
-    totalScore,
+    categoryId,
+    categoryTotalScore,
+    previousCategoryTotal,
     gained,
-    previousTotal,
     previousRank,
     rank,
     rankedUp: rank.level > previousRank.level,
@@ -227,13 +230,32 @@ export function recordRoundResult(profileId, categoryId, { score = 0, wordsClear
 }
 
 /**
- * プロフィールの積算スコアを取り出す。旧データや欠損は 0 として扱う。
+ * あるお題（カテゴリ）の積算スコアを取り出す。旧データや欠損は 0 として扱う。
+ * 称号（お題ごと）の判定・表示はこの値を使う。
+ * @param {object|null|undefined} profile
+ * @param {string} categoryId
+ * @returns {number}
+ */
+export function getCategoryTotalScore(profile, categoryId) {
+  const total = profile?.stats?.[categoryId]?.totalScore;
+  return Number.isFinite(total) && total > 0 ? total : 0;
+}
+
+/**
+ * プロフィール全体の合計スコア（全お題の積算スコアの総和）。
+ * こちらは称号ではなく、プロフィール一覧などで「ごうけい」を出すための参考値。
  * @param {object|null|undefined} profile
  * @returns {number}
  */
 export function getProfileTotalScore(profile) {
-  const total = profile?.totalScore;
-  return Number.isFinite(total) && total > 0 ? total : 0;
+  const stats = profile?.stats;
+  if (!stats || typeof stats !== 'object') return 0;
+  let sum = 0;
+  for (const s of Object.values(stats)) {
+    const t = s?.totalScore;
+    if (Number.isFinite(t) && t > 0) sum += t;
+  }
+  return sum;
 }
 
 /**

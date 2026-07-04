@@ -12,10 +12,12 @@ const OVERLAY_ID = 'rank-popup-overlay';
 
 /**
  * ランク一覧ポップアップを表示する。既に開いていれば作り直す。
- * @param {number} [totalScore=0] いまの積算スコア（該当ランクをハイライト＆スコア表示に使う）
+ * 称号はお題ごとなので、どのお題の積算スコアで見ているかを categoryLabel で受け取る。
+ * @param {number} [totalScore=0] そのお題の積算スコア（該当ランクをハイライト＆スコア表示に使う）
+ * @param {string} [categoryLabel=''] お題名（例: うみのいきもの）。あれば見出しに添える。
  * @returns {HTMLElement} 生成したオーバーレイ要素
  */
-export function showRankListPopup(totalScore = 0) {
+export function showRankListPopup(totalScore = 0, categoryLabel = '') {
   closeRankListPopup();
 
   const score = Number.isFinite(totalScore) && totalScore > 0 ? totalScore : 0;
@@ -38,7 +40,8 @@ export function showRankListPopup(totalScore = 0) {
 
   const sub = document.createElement('p');
   sub.className = 'rank-popup-sub';
-  sub.textContent = `いまのスコア ${score} ・ ${current.emoji} ${current.title}`;
+  const prefix = categoryLabel ? `${categoryLabel}｜` : '';
+  sub.textContent = `${prefix}いまのスコア ${score} ・ ${current.emoji} ${current.title}`;
   panel.appendChild(sub);
 
   const list = document.createElement('div');
