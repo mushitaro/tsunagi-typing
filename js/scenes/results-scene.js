@@ -1,4 +1,4 @@
-import { getActiveProfile, getProfileTotalScore } from '../profile/profile-store.js';
+import { getActiveProfile, getCategoryTotalScore } from '../profile/profile-store.js';
 import { getRankForScore, getRankProgress } from '../profile/ranks.js';
 import { showRankListPopup, closeRankListPopup } from '../ui/rank-list-popup.js';
 
@@ -17,10 +17,12 @@ export const resultsScene = {
     const best = profile?.stats?.[params.categoryId]?.bestScore ?? 0;
     const isNewRecord = params.score > 0 && params.score >= best;
 
-    // 積算スコア・称号は game-scene から渡される progression を第一の情報源とし、
-    // 無い場合（profile 未設定など）は現在のプロフィールから読み直してフォールバックする。
+    // 称号は「お題ごと」。このお題の積算スコアと称号は game-scene から渡される
+    // progression を第一の情報源とし、無い場合（profile 未設定など）は
+    // 現在のプロフィールのそのお題の積算スコアから読み直してフォールバックする。
+    const categoryLabel = params.categoryLabel ?? '';
     const progression = params.progression ?? null;
-    const totalScore = progression?.totalScore ?? getProfileTotalScore(profile);
+    const totalScore = progression?.categoryTotalScore ?? getCategoryTotalScore(profile, params.categoryId);
     const rank = progression?.rank ?? getRankForScore(totalScore);
     const rankedUp = progression?.rankedUp ?? false;
     const progress = getRankProgress(totalScore);
@@ -79,7 +81,7 @@ export const resultsScene = {
 
     const rankLabel = document.createElement('div');
     rankLabel.className = 'results-rank-label';
-    rankLabel.textContent = `しょうごう Lv.${rank.level}`;
+    rankLabel.textContent = `${categoryLabel ? categoryLabel + ' の ' : ''}しょうごう Lv.${rank.level}`;
     rankText.appendChild(rankLabel);
 
     const rankTitle = document.createElement('div');
@@ -92,7 +94,7 @@ export const resultsScene = {
 
     const totalEl = document.createElement('div');
     totalEl.className = 'results-total';
-    totalEl.textContent = `つうさんスコア: ${totalScore}`;
+    totalEl.textContent = `${categoryLabel ? categoryLabel + ' つうさん' : 'つうさんスコア'}: ${totalScore}`;
     this.summaryEl.appendChild(totalEl);
 
     // ── 次の称号までの進み具合 ──
@@ -123,7 +125,7 @@ export const resultsScene = {
     listBtn.textContent = '📖 しょうごう いちらん';
     this._onRankList = () => {
       this.appCtx.sfx.uiClick();
-      showRankListPopup(totalScore);
+      showRankListPopup(totalScore, categoryLabel);
     };
     listBtn.addEventListener('click', this._onRankList);
     this.summaryEl.appendChild(listBtn);

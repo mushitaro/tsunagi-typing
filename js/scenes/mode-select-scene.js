@@ -1,4 +1,4 @@
-import { getActiveProfile, setActiveProfile, getProfileTotalScore } from '../profile/profile-store.js';
+import { getActiveProfile, setActiveProfile, getCategoryTotalScore } from '../profile/profile-store.js';
 import { getRankForScore } from '../profile/ranks.js';
 import { showRankListPopup, closeRankListPopup } from '../ui/rank-list-popup.js';
 import { drawSpriteThumbnail, CATEGORY_ICONS } from '../ui/sprite-thumbnail.js';
@@ -24,7 +24,7 @@ export const modeSelectScene = {
     this.backBtn = document.getElementById('back-to-profiles-btn');
     this.titleBadge = document.getElementById('mode-title-badge');
 
-    this.renderTitleBadge();
+    this.renderPlayerBadge();
 
     this._onLangClick = (e) => {
       const btn = e.target.closest('.lang-btn');
@@ -63,8 +63,18 @@ export const modeSelectScene = {
     });
   },
 
-  /** アクティブなプロフィールの称号（積算スコアから算出）をヘッダー下に表示する。 */
-  renderTitleBadge() {
+  /** お題名を取得する（言語に応じて）。 */
+  categoryLabelOf(categoryId) {
+    const c = this.wordData?.categories?.find((x) => x.id === categoryId);
+    return c ? (this.language === 'ja' ? c.labelJa : c.labelEn) : '';
+  },
+
+  /**
+   * ヘッダー下に「あそぶ子の名前」と称号いちらんへの入口を表示する。
+   * 称号はお題ごとなので、ここには特定の称号は出さず、名前と一覧ボタンだけを置く
+   * （各お題の称号は下のお題タイルに表示する）。
+   */
+  renderPlayerBadge() {
     if (!this.titleBadge) return;
     if (!this.profile) {
       this.titleBadge.hidden = true;
@@ -72,8 +82,6 @@ export const modeSelectScene = {
       return;
     }
 
-    const totalScore = getProfileTotalScore(this.profile);
-    const rank = getRankForScore(totalScore);
     this.titleBadge.hidden = false;
     this.titleBadge.innerHTML = '';
 
@@ -82,28 +90,18 @@ export const modeSelectScene = {
     nameEl.textContent = this.profile.name;
     this.titleBadge.appendChild(nameEl);
 
-    const rankEl = document.createElement('span');
-    rankEl.className = 'profile-title-badge-rank';
-    rankEl.textContent = `${rank.emoji} ${rank.title}`;
-    this.titleBadge.appendChild(rankEl);
-
-    const scoreEl = document.createElement('span');
-    scoreEl.className = 'profile-title-badge-score';
-    scoreEl.textContent = `つうさん ${totalScore}`;
-    this.titleBadge.appendChild(scoreEl);
-
     const hintEl = document.createElement('span');
     hintEl.className = 'profile-title-badge-hint';
-    hintEl.textContent = 'いちらん ▸';
+    hintEl.textContent = '📖 しょうごう いちらん ▸';
     this.titleBadge.appendChild(hintEl);
 
-    // バッジをタップすると全称号の一覧ポップアップを開く。
+    // バッジをタップすると称号いちらんポップアップを開く（選んでいるお題の進み具合を表示）。
     this.titleBadge.classList.add('is-tappable');
     this.titleBadge.setAttribute('role', 'button');
     this.titleBadge.setAttribute('tabindex', '0');
     this._onBadge = () => {
       this.appCtx.sfx.uiClick();
-      showRankListPopup(getProfileTotalScore(this.profile));
+      showRankListPopup(getCategoryTotalScore(this.profile, this.categoryId), this.categoryLabelOf(this.categoryId));
     };
     this._onBadgeKey = (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
@@ -133,6 +131,22 @@ export const modeSelectScene = {
       label.className = 'category-card-label';
       label.textContent = this.language === 'ja' ? cat.labelJa : cat.labelEn;
       card.appendChild(label);
+
+      // お題ごとの称号と積算スコア（そのお題の totalScore から算出）。
+      if (this.profile) {
+        const catTotal = getCategoryTotalScore(this.profile, cat.id);
+        const catRank = getRankForScore(catTotal);
+
+        const titleEl = document.createElement('div');
+        titleEl.className = 'category-card-title';
+        titleEl.textContent = `${catRank.emoji} ${catRank.title}`;
+        card.appendChild(titleEl);
+
+        const scoreEl = document.createElement('div');
+        scoreEl.className = 'category-card-score';
+        scoreEl.textContent = `つうさん ${catTotal}`;
+        card.appendChild(scoreEl);
+      }
 
       this.categoryGrid.appendChild(card);
 

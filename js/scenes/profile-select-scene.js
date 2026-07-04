@@ -1,5 +1,4 @@
 import { loadProfiles, setActiveProfile, deleteProfile, getProfileTotalScore } from '../profile/profile-store.js';
-import { getRankForScore } from '../profile/ranks.js';
 import { drawSpriteThumbnail, avatarVariant } from '../ui/sprite-thumbnail.js';
 
 export const profileSelectScene = {
@@ -38,18 +37,12 @@ export const profileSelectScene = {
       nameEl.textContent = profile.name;
       card.appendChild(nameEl);
 
-      // 積算スコアから今の称号を出して、なまえの下に見せる。
-      const totalScore = getProfileTotalScore(profile);
-      const rank = getRankForScore(totalScore);
-      const titleEl = document.createElement('div');
-      titleEl.className = 'profile-card-title';
-      titleEl.textContent = `${rank.emoji} ${rank.title}`;
-      card.appendChild(titleEl);
-
-      const bestEl = document.createElement('div');
-      bestEl.className = 'profile-card-best';
-      bestEl.textContent = `つうさん ${totalScore}`;
-      card.appendChild(bestEl);
+      // 称号はお題ごとなので、ここでは全お題の合計スコア（ごうけい）だけを見せる。
+      const grandTotal = getProfileTotalScore(profile);
+      const totalEl = document.createElement('div');
+      totalEl.className = 'profile-card-best';
+      totalEl.textContent = `ごうけい ${grandTotal}てん`;
+      card.appendChild(totalEl);
 
       card.addEventListener('click', () => {
         this.appCtx.sfx.uiClick();
