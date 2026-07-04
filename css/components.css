@@ -373,6 +373,13 @@
   letter-spacing: 0.08em;
 }
 
+.word-caption-reading {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 3.4vw, 1.4rem);
+  color: var(--color-laser);
+  letter-spacing: 0.1em;
+}
+
 .word-caption-sub {
   font-family: var(--font-pixel);
   font-size: 1.1rem;

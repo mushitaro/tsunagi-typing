@@ -155,6 +155,15 @@ export const gameScene = {
         : this.currentWord.display.word;
     this.captionEl.appendChild(mainEl);
 
+    // よみ方（かけ算の九九など）。display.reading があるときだけ主表示の下に出す。
+    const reading = this.currentWord.display.reading;
+    if (reading) {
+      const readingEl = document.createElement('div');
+      readingEl.className = 'word-caption-reading';
+      readingEl.textContent = reading;
+      this.captionEl.appendChild(readingEl);
+    }
+
     const subEl = document.createElement('div');
     subEl.className = 'word-caption-sub';
     for (const seg of segments) {

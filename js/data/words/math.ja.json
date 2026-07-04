@@ -1190,5 +1190,1544 @@
     "spriteVariant": {
       "palette": "math-mono"
     }
+  },
+  {
+    "id": "math-ja-mul-1x1",
+    "conceptId": "mul-1x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 1 = 1",
+      "reading": "いんいち",
+      "hiragana": "いんいち"
+    },
+    "typing": {
+      "targetText": "1"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x2",
+    "conceptId": "mul-1x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 2 = 2",
+      "reading": "いんに",
+      "hiragana": "いんに"
+    },
+    "typing": {
+      "targetText": "2"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x3",
+    "conceptId": "mul-1x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 3 = 3",
+      "reading": "いんさん",
+      "hiragana": "いんさん"
+    },
+    "typing": {
+      "targetText": "3"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x4",
+    "conceptId": "mul-1x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 4 = 4",
+      "reading": "いんし",
+      "hiragana": "いんし"
+    },
+    "typing": {
+      "targetText": "4"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x5",
+    "conceptId": "mul-1x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 5 = 5",
+      "reading": "いんご",
+      "hiragana": "いんご"
+    },
+    "typing": {
+      "targetText": "5"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x6",
+    "conceptId": "mul-1x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 6 = 6",
+      "reading": "いんろく",
+      "hiragana": "いんろく"
+    },
+    "typing": {
+      "targetText": "6"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x7",
+    "conceptId": "mul-1x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 7 = 7",
+      "reading": "いんしち",
+      "hiragana": "いんしち"
+    },
+    "typing": {
+      "targetText": "7"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x8",
+    "conceptId": "mul-1x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 8 = 8",
+      "reading": "いんはち",
+      "hiragana": "いんはち"
+    },
+    "typing": {
+      "targetText": "8"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-1x9",
+    "conceptId": "mul-1x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "1 × 9 = 9",
+      "reading": "いんく",
+      "hiragana": "いんく"
+    },
+    "typing": {
+      "targetText": "9"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x1",
+    "conceptId": "mul-2x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 1 = 2",
+      "reading": "にいち",
+      "hiragana": "にいち"
+    },
+    "typing": {
+      "targetText": "2"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x2",
+    "conceptId": "mul-2x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 2 = 4",
+      "reading": "にに",
+      "hiragana": "にに"
+    },
+    "typing": {
+      "targetText": "4"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x3",
+    "conceptId": "mul-2x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 3 = 6",
+      "reading": "にさん",
+      "hiragana": "にさん"
+    },
+    "typing": {
+      "targetText": "6"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x4",
+    "conceptId": "mul-2x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 4 = 8",
+      "reading": "にし",
+      "hiragana": "にし"
+    },
+    "typing": {
+      "targetText": "8"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x5",
+    "conceptId": "mul-2x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 5 = 10",
+      "reading": "にご",
+      "hiragana": "にご"
+    },
+    "typing": {
+      "targetText": "10"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x6",
+    "conceptId": "mul-2x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 6 = 12",
+      "reading": "にろく",
+      "hiragana": "にろく"
+    },
+    "typing": {
+      "targetText": "12"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x7",
+    "conceptId": "mul-2x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 7 = 14",
+      "reading": "にしち",
+      "hiragana": "にしち"
+    },
+    "typing": {
+      "targetText": "14"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x8",
+    "conceptId": "mul-2x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 8 = 16",
+      "reading": "にはち",
+      "hiragana": "にはち"
+    },
+    "typing": {
+      "targetText": "16"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-2x9",
+    "conceptId": "mul-2x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "2 × 9 = 18",
+      "reading": "にく",
+      "hiragana": "にく"
+    },
+    "typing": {
+      "targetText": "18"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x1",
+    "conceptId": "mul-3x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 1 = 3",
+      "reading": "さんいち",
+      "hiragana": "さんいち"
+    },
+    "typing": {
+      "targetText": "3"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x2",
+    "conceptId": "mul-3x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 2 = 6",
+      "reading": "さんに",
+      "hiragana": "さんに"
+    },
+    "typing": {
+      "targetText": "6"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x3",
+    "conceptId": "mul-3x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 3 = 9",
+      "reading": "さざん",
+      "hiragana": "さざん"
+    },
+    "typing": {
+      "targetText": "9"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x4",
+    "conceptId": "mul-3x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 4 = 12",
+      "reading": "さんし",
+      "hiragana": "さんし"
+    },
+    "typing": {
+      "targetText": "12"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x5",
+    "conceptId": "mul-3x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 5 = 15",
+      "reading": "さんご",
+      "hiragana": "さんご"
+    },
+    "typing": {
+      "targetText": "15"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x6",
+    "conceptId": "mul-3x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 6 = 18",
+      "reading": "さぶろく",
+      "hiragana": "さぶろく"
+    },
+    "typing": {
+      "targetText": "18"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x7",
+    "conceptId": "mul-3x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 7 = 21",
+      "reading": "さんしち",
+      "hiragana": "さんしち"
+    },
+    "typing": {
+      "targetText": "21"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x8",
+    "conceptId": "mul-3x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 8 = 24",
+      "reading": "さんぱ",
+      "hiragana": "さんぱ"
+    },
+    "typing": {
+      "targetText": "24"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-3x9",
+    "conceptId": "mul-3x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "3 × 9 = 27",
+      "reading": "さんく",
+      "hiragana": "さんく"
+    },
+    "typing": {
+      "targetText": "27"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x1",
+    "conceptId": "mul-4x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 1 = 4",
+      "reading": "しいち",
+      "hiragana": "しいち"
+    },
+    "typing": {
+      "targetText": "4"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x2",
+    "conceptId": "mul-4x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 2 = 8",
+      "reading": "しに",
+      "hiragana": "しに"
+    },
+    "typing": {
+      "targetText": "8"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x3",
+    "conceptId": "mul-4x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 3 = 12",
+      "reading": "しさん",
+      "hiragana": "しさん"
+    },
+    "typing": {
+      "targetText": "12"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x4",
+    "conceptId": "mul-4x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 4 = 16",
+      "reading": "しし",
+      "hiragana": "しし"
+    },
+    "typing": {
+      "targetText": "16"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x5",
+    "conceptId": "mul-4x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 5 = 20",
+      "reading": "しご",
+      "hiragana": "しご"
+    },
+    "typing": {
+      "targetText": "20"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x6",
+    "conceptId": "mul-4x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 6 = 24",
+      "reading": "しろく",
+      "hiragana": "しろく"
+    },
+    "typing": {
+      "targetText": "24"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x7",
+    "conceptId": "mul-4x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 7 = 28",
+      "reading": "ししち",
+      "hiragana": "ししち"
+    },
+    "typing": {
+      "targetText": "28"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x8",
+    "conceptId": "mul-4x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 8 = 32",
+      "reading": "しは",
+      "hiragana": "しは"
+    },
+    "typing": {
+      "targetText": "32"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-4x9",
+    "conceptId": "mul-4x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "4 × 9 = 36",
+      "reading": "しく",
+      "hiragana": "しく"
+    },
+    "typing": {
+      "targetText": "36"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x1",
+    "conceptId": "mul-5x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 1 = 5",
+      "reading": "ごいち",
+      "hiragana": "ごいち"
+    },
+    "typing": {
+      "targetText": "5"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x2",
+    "conceptId": "mul-5x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 2 = 10",
+      "reading": "ごに",
+      "hiragana": "ごに"
+    },
+    "typing": {
+      "targetText": "10"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x3",
+    "conceptId": "mul-5x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 3 = 15",
+      "reading": "ごさん",
+      "hiragana": "ごさん"
+    },
+    "typing": {
+      "targetText": "15"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x4",
+    "conceptId": "mul-5x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 4 = 20",
+      "reading": "ごし",
+      "hiragana": "ごし"
+    },
+    "typing": {
+      "targetText": "20"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x5",
+    "conceptId": "mul-5x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 5 = 25",
+      "reading": "ごご",
+      "hiragana": "ごご"
+    },
+    "typing": {
+      "targetText": "25"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x6",
+    "conceptId": "mul-5x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 6 = 30",
+      "reading": "ごろく",
+      "hiragana": "ごろく"
+    },
+    "typing": {
+      "targetText": "30"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x7",
+    "conceptId": "mul-5x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 7 = 35",
+      "reading": "ごしち",
+      "hiragana": "ごしち"
+    },
+    "typing": {
+      "targetText": "35"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x8",
+    "conceptId": "mul-5x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 8 = 40",
+      "reading": "ごは",
+      "hiragana": "ごは"
+    },
+    "typing": {
+      "targetText": "40"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-5x9",
+    "conceptId": "mul-5x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "5 × 9 = 45",
+      "reading": "ごっく",
+      "hiragana": "ごっく"
+    },
+    "typing": {
+      "targetText": "45"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x1",
+    "conceptId": "mul-6x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 1 = 6",
+      "reading": "ろくいち",
+      "hiragana": "ろくいち"
+    },
+    "typing": {
+      "targetText": "6"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x2",
+    "conceptId": "mul-6x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 2 = 12",
+      "reading": "ろくに",
+      "hiragana": "ろくに"
+    },
+    "typing": {
+      "targetText": "12"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x3",
+    "conceptId": "mul-6x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 3 = 18",
+      "reading": "ろくさん",
+      "hiragana": "ろくさん"
+    },
+    "typing": {
+      "targetText": "18"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x4",
+    "conceptId": "mul-6x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 4 = 24",
+      "reading": "ろくし",
+      "hiragana": "ろくし"
+    },
+    "typing": {
+      "targetText": "24"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x5",
+    "conceptId": "mul-6x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 5 = 30",
+      "reading": "ろくご",
+      "hiragana": "ろくご"
+    },
+    "typing": {
+      "targetText": "30"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x6",
+    "conceptId": "mul-6x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 6 = 36",
+      "reading": "ろくろく",
+      "hiragana": "ろくろく"
+    },
+    "typing": {
+      "targetText": "36"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x7",
+    "conceptId": "mul-6x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 7 = 42",
+      "reading": "ろくしち",
+      "hiragana": "ろくしち"
+    },
+    "typing": {
+      "targetText": "42"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x8",
+    "conceptId": "mul-6x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 8 = 48",
+      "reading": "ろくは",
+      "hiragana": "ろくは"
+    },
+    "typing": {
+      "targetText": "48"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-6x9",
+    "conceptId": "mul-6x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "6 × 9 = 54",
+      "reading": "ろっく",
+      "hiragana": "ろっく"
+    },
+    "typing": {
+      "targetText": "54"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x1",
+    "conceptId": "mul-7x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 1 = 7",
+      "reading": "しちいち",
+      "hiragana": "しちいち"
+    },
+    "typing": {
+      "targetText": "7"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x2",
+    "conceptId": "mul-7x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 2 = 14",
+      "reading": "しちに",
+      "hiragana": "しちに"
+    },
+    "typing": {
+      "targetText": "14"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x3",
+    "conceptId": "mul-7x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 3 = 21",
+      "reading": "しちさん",
+      "hiragana": "しちさん"
+    },
+    "typing": {
+      "targetText": "21"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x4",
+    "conceptId": "mul-7x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 4 = 28",
+      "reading": "しちし",
+      "hiragana": "しちし"
+    },
+    "typing": {
+      "targetText": "28"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x5",
+    "conceptId": "mul-7x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 5 = 35",
+      "reading": "しちご",
+      "hiragana": "しちご"
+    },
+    "typing": {
+      "targetText": "35"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x6",
+    "conceptId": "mul-7x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 6 = 42",
+      "reading": "しちろく",
+      "hiragana": "しちろく"
+    },
+    "typing": {
+      "targetText": "42"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x7",
+    "conceptId": "mul-7x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 7 = 49",
+      "reading": "しちしち",
+      "hiragana": "しちしち"
+    },
+    "typing": {
+      "targetText": "49"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x8",
+    "conceptId": "mul-7x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 8 = 56",
+      "reading": "しちは",
+      "hiragana": "しちは"
+    },
+    "typing": {
+      "targetText": "56"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-7x9",
+    "conceptId": "mul-7x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "7 × 9 = 63",
+      "reading": "しちく",
+      "hiragana": "しちく"
+    },
+    "typing": {
+      "targetText": "63"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x1",
+    "conceptId": "mul-8x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 1 = 8",
+      "reading": "はちいち",
+      "hiragana": "はちいち"
+    },
+    "typing": {
+      "targetText": "8"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x2",
+    "conceptId": "mul-8x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 2 = 16",
+      "reading": "はちに",
+      "hiragana": "はちに"
+    },
+    "typing": {
+      "targetText": "16"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x3",
+    "conceptId": "mul-8x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 3 = 24",
+      "reading": "はちさん",
+      "hiragana": "はちさん"
+    },
+    "typing": {
+      "targetText": "24"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x4",
+    "conceptId": "mul-8x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 4 = 32",
+      "reading": "はちし",
+      "hiragana": "はちし"
+    },
+    "typing": {
+      "targetText": "32"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x5",
+    "conceptId": "mul-8x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 5 = 40",
+      "reading": "はちご",
+      "hiragana": "はちご"
+    },
+    "typing": {
+      "targetText": "40"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x6",
+    "conceptId": "mul-8x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 6 = 48",
+      "reading": "はちろく",
+      "hiragana": "はちろく"
+    },
+    "typing": {
+      "targetText": "48"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x7",
+    "conceptId": "mul-8x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 7 = 56",
+      "reading": "はちしち",
+      "hiragana": "はちしち"
+    },
+    "typing": {
+      "targetText": "56"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x8",
+    "conceptId": "mul-8x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 8 = 64",
+      "reading": "はっぱ",
+      "hiragana": "はっぱ"
+    },
+    "typing": {
+      "targetText": "64"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-8x9",
+    "conceptId": "mul-8x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "8 × 9 = 72",
+      "reading": "はっく",
+      "hiragana": "はっく"
+    },
+    "typing": {
+      "targetText": "72"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x1",
+    "conceptId": "mul-9x1",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 1 = 9",
+      "reading": "くいち",
+      "hiragana": "くいち"
+    },
+    "typing": {
+      "targetText": "9"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x2",
+    "conceptId": "mul-9x2",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 2 = 18",
+      "reading": "くに",
+      "hiragana": "くに"
+    },
+    "typing": {
+      "targetText": "18"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-circle-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x3",
+    "conceptId": "mul-9x3",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 3 = 27",
+      "reading": "くさん",
+      "hiragana": "くさん"
+    },
+    "typing": {
+      "targetText": "27"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-square-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x4",
+    "conceptId": "mul-9x4",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 4 = 36",
+      "reading": "くし",
+      "hiragana": "くし"
+    },
+    "typing": {
+      "targetText": "36"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-triangle-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x5",
+    "conceptId": "mul-9x5",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 5 = 45",
+      "reading": "くご",
+      "hiragana": "くご"
+    },
+    "typing": {
+      "targetText": "45"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-diamond-01",
+    "spriteVariant": {
+      "palette": "math-orange"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x6",
+    "conceptId": "mul-9x6",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 6 = 54",
+      "reading": "くろく",
+      "hiragana": "くろく"
+    },
+    "typing": {
+      "targetText": "54"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-pentagon-01",
+    "spriteVariant": {
+      "palette": "math-teal"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x7",
+    "conceptId": "mul-9x7",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 7 = 63",
+      "reading": "くしち",
+      "hiragana": "くしち"
+    },
+    "typing": {
+      "targetText": "63"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-hexagon-01",
+    "spriteVariant": {
+      "palette": "math-pink"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x8",
+    "conceptId": "mul-9x8",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 8 = 72",
+      "reading": "くはち",
+      "hiragana": "くはち"
+    },
+    "typing": {
+      "targetText": "72"
+    },
+    "difficulty": 1,
+    "spriteId": "op-times-01",
+    "spriteVariant": {
+      "palette": "math-green"
+    }
+  },
+  {
+    "id": "math-ja-mul-9x9",
+    "conceptId": "mul-9x9",
+    "category": "math",
+    "lang": "ja",
+    "display": {
+      "kanji": "9 × 9 = 81",
+      "reading": "くく",
+      "hiragana": "くく"
+    },
+    "typing": {
+      "targetText": "81"
+    },
+    "difficulty": 1,
+    "spriteId": "shape-star-01",
+    "spriteVariant": {
+      "palette": "math-blue"
+    }
   }
 ]
